@@ -1,22 +1,22 @@
+from flask import Flask
+from flask_cors import CORS
+from routes.analyze import analyze_bp
+from routes.code_analyzer import code_analyzer_bp
 import sys
 import os
 
 # Ensure backend folder is in Python path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from flask import Flask
-from routes.analyze import analyze_bp
-
-
 def create_app():
     app = Flask(__name__)
 
     # Enable CORS for frontend-backend communication
-    from flask_cors import CORS
     CORS(app)
 
     # Register blueprints
     app.register_blueprint(analyze_bp)
+    app.register_blueprint(code_analyzer_bp)
 
     @app.route("/")
     def health_check():
@@ -27,4 +27,4 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    app.run(debug=True)
+    app.run(debug=True, port=5000)

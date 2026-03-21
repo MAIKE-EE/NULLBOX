@@ -1,3 +1,5 @@
+#ML MODEL LINE 57
+
 import re
 from utils.patterns import (
     SQLI_PATTERNS,
@@ -53,3 +55,4 @@ def detect_attack(payload: str) -> dict:
         "matched_pattern": None,
         "confidence": "Rule-based"
     }
+
