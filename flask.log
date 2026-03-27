@@ -1,0 +1,568 @@
+Model loaded successfully.
+Model loaded successfully.
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ * Detected change in 'D:\\NULLBOX\\Backend\\utils\\code_patterns.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ * Detected change in 'D:\\NULLBOX\\Backend\\routes\\code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ * Detected change in 'D:\\NULLBOX\\Backend\\routes\\code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ * Detected change in 'D:\\NULLBOX\\test_code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ * Detected change in 'D:\\NULLBOX\\test_code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ * Detected change in 'D:\\NULLBOX\\test_code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ [24/Mar/2026 10:13:06] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:13:14] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:13:22] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:13:29] "POST /analyze_code HTTP/1.1" 200 -
+ * Detected change in 'D:\\NULLBOX\\Backend\\utils\\code_patterns.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 143)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 200)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 4 column 3 (char 44)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 161)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 168)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 4 column 3 (char 44)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 133)
+[DEBUG] JSON parsing failed, using fallback detection
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ * Detected change in 'D:\\NULLBOX\\Backend\\routes\\code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+127.0.0.1 - - [24/Mar/2026 10:15:40] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:15:48] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:15:56] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:16:04] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:16:12] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:16:21] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:16:29] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:16:36] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:17:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:17:26] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:17:35] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:17:45] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:17:52] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:18:00] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:18:09] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:18:17] "POST /analyze_code HTTP/1.1" 200 -
+ * Detected change in 'D:\\NULLBOX\\Backend\\routes\\code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 176)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 162)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 200)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 153)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 119)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 251)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 134)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 184)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 198)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 65)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 160)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 152)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 267)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 144)
+[DEBUG] JSON parsing failed, using fallback detection
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+127.0.0.1 - - [24/Mar/2026 10:18:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:19:02] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:19:10] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:19:18] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:19:25] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:19:33] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:19:40] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:19:48] "POST /analyze_code HTTP/1.1" 200 -
+ * Detected change in 'D:\\NULLBOX\\test_code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 170)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 74
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 180)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 75
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 65)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 32
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 130)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 48
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 100)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 75
+[DEBUG] JSON parsing error: Extra data: line 4 column 3 (char 44)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 60
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 178)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 31
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ * Detected change in 'D:\\NULLBOX\\test_code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+ * Detected change in 'D:\\NULLBOX\\test_code_analyzer.py', reloading
+Model loaded successfully.
+Model loaded successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 928-618-535
+127.0.0.1 - - [24/Mar/2026 10:21:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:21:36] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:21:44] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:21:52] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:22:01] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:22:09] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:22:18] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:22:26] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:23:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:23:51] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:24:00] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:24:09] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:24:17] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:24:25] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:24:34] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:24:41] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:27:20] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:28:21] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:28:29] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:28:41] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:28:48] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:28:53] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:29:01] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:29:11] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:29:14] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:29:17] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:29:26] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:29:47] "OPTIONS /chat HTTP/1.1" 200 -
+Model loaded successfully.
+Model loaded successfully.
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 157)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 74
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 160)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 79
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 166)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 26
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 158)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 50
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 163)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 75
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 65)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 60
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 163)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 31
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 173)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 74
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 206)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 79
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 207)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 26
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 223)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 50
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 165)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 75
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 65)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 60
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 132)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 31
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 195)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 16
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 161)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 31
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 190)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 31
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 200)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 31
+=== CHAT REQUEST RECEIVED ===
+DEBUG: session_id=5ff83b99-a10e-4457-99b0-2cbd9161abbc
+DEBUG: message=Explain this input
+DEBUG: payload=`whoami`
+DEBUG: vulnerability_type=Command Injection
+DEBUG: lab_type= pping 
+DEBUG: Built prompt: You are NULLBOT, a cybersecurity tutor in a safe educational lab.
+
+Lab type:  pping 
+Payload: `whoam...
+DEBUG: Added user message to session
+DEBUG: Retrieved 2 messages from session
+DEBUG: Calling LLM...
+DEBUG: LLM returned: In our lab today, we have an interesting case of a Command Injection attack.
+
+The input provided is:...
+DEBUG: Added assistant response to session
+DEBUG: Returning: {'response': "In our lab today, we have an interesting case of a Command Injection attack.\n\nThe input provided is: `whoami`\n\nThis input is likely being executed as a command within the system. In this context, `whoami` is a Unix/Linux command that displays the username of the current user.\n\nLet's break down what's happening:\n\n1. **Command Injection**: The attacker has somehow injected this specific command into a vulnerable application or system.\n2. **Vulnerability Type**: This is an example of a Command Injection vulnerability, where user input is executed as a system command without proper sanitization or validation.\n\nTo understand how to prevent such vulnerabilities, let's focus on two key concepts:\n\n1. **Input Validation**: Ensure that the application correctly validates and sanitizes user inputs to prevent malicious commands from being injected.\n2. **Escaping**: Properly escape special characters within user input to prevent them from being interpreted as part of a command.\n\nIn this specific case, if an attacker were able to inject `whoami` into a vulnerable system, it might reveal sensitive information about the current user. To prevent such attacks, we need to ensure that our applications are robust against Command Injection and carefully validate all user inputs.\n\nNext steps:\n\n* Review how input validation and escaping can be applied in your own projects.\n* Consider exploring examples of secure coding practices for preventing Command Injection vulnerabilities.", 'session_id': '5ff83b99-a10e-4457-99b0-2cbd9161abbc'}
+=== CHAT REQUEST COMPLETE ===
+=== CHAT REQUEST RECEIVED ===
+DEBUG: session_id=5ff83b99-a10e-4457-99b0-2cbd9161abbc
+DEBUG: message=how can i prevent these type of attacks
+DEBUG: payload=`whoami`
+DEBUG: vulnerability_type=Command Injection
+DEBUG: lab_type= pping 
+DEBUG: Built prompt: You are NULLBOT, a cybersecurity tutor in a safe educational lab.
+
+Lab type:  pping 
+Payload: `whoam...
+DEBUG: Added user message to session
+DEBUG: Retrieved 4 messages from session
+DEBUG: Calling LLM...
+DEBUG: LLM returned: To prevent Command Injection attacks, let's focus on two essential steps:
+
+1. **Input Validation**: ...
+DEBUG: Added assistant response to session
+DEBUG: Returning: {'response': "To prevent Command Injection attacks, let's focus on two essential steps:\n\n1. **Input Validation**: Always validate user inputs to ensure they conform to expected formats and values. This can include:\n\t* Checking for unexpected characters or keywords\n\t* Verifying the length of input\n\t* Ensuring inputs match a specific pattern (e.g., alphanumeric, email address)\n2. **Escaping User Input**: Properly escape special characters within user input to prevent them from being interpreted as part of a command.\n\t* Use libraries or functions that implement escaping for you\n\t* Understand how the application's templating engine or string formatting works\n\nAdditionally, consider these best practices:\n\n* **Use Prepared Statements**: In databases, use prepared statements with parameterized queries instead of concatenating user input into SQL commands.\n* **Avoid Dynamic Command Execution**: Minimize situations where user input is executed as a system command. Instead, use safer alternatives like using libraries or built-in functions for specific tasks.\n\nTo illustrate this, imagine you're building an interactive shell in your application. Instead of executing `whoami` directly from user input, consider using a library that provides a secure way to obtain the current username:\n\n```python\nimport getpass\n\nusername = getpass.getuser()\nprint(username)\n```\n\nBy implementing these measures, you'll significantly reduce the risk of Command Injection attacks.\n\nNext steps:\n\n* Research specific libraries and frameworks that can help with input validation and escaping in your chosen programming language.\n* Practice writing secure code by applying these principles to a simple application or exercise.", 'session_id': '5ff83b99-a10e-4457-99b0-2cbd9161abbc'}127.0.0.1 - - [24/Mar/2026 10:29:57] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:30:13] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:30:16] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:30:17] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:30:27] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:30:34] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:30:42] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:31:11] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:31:19] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:31:27] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:31:35] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:32:04] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:32:12] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:32:34] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:32:41] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:33:01] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:33:08] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:33:57] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:34:00] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:34:39] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:34:42] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:34:53] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:35:03] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:35:28] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:35:32] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:36:02] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:36:06] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:36:36] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 10:36:39] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:04:42] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:05:01] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:05:19] "OPTIONS /analyze_code HTTP/1.1" 200 -
+
+=== CHAT REQUEST COMPLETE ===
+=== CHAT REQUEST RECEIVED ===
+DEBUG: session_id=5a56b6a2-6c73-4040-bea1-344efd9333ef
+DEBUG: message=Explain this input
+DEBUG: payload=|| echo vulnerable
+DEBUG: vulnerability_type=Command Injection
+DEBUG: lab_type= pping 
+DEBUG: Built prompt: You are NULLBOT, a cybersecurity tutor in a safe educational lab.
+
+Lab type:  pping 
+Payload: || ech...
+DEBUG: Added user message to session
+DEBUG: Retrieved 2 messages from session
+DEBUG: Calling LLM...
+DEBUG: LLM returned: Let's take a closer look at this input:
+
+`|| echo vulnerable`
+
+In this payload, we have a special ch...
+DEBUG: Added assistant response to session
+DEBUG: Returning: {'response': 'Let\'s take a closer look at this input:\n\n`|| echo vulnerable`\n\nIn this payload, we have a special character called the "pipe" (`|`). The pipe is used in Linux systems to separate commands. When the pipe appears twice in a row (`||`), it\'s like saying "or" – if the first command fails, try the second one.\n\nIn this case, the input `echo vulnerable` is a simple Linux command that prints the text "vulnerable". The idea here is that if the attack is successful, this command will be executed and print "vulnerable", indicating the system\'s vulnerability.\n\nThe vulnerability type we\'re dealing with is Command Injection. This occurs when an attacker injects malicious commands into a system through input, like a web form or a database query. In our lab, we\'re simulating a scenario where user input can potentially lead to Command Injection.\n\nTo prevent this kind of attack in real-world scenarios:\n\n1. **Validate and sanitize user input**: Make sure the data entered by users is properly checked for malicious commands.\n2. **Use prepared statements or parameterized queries**: Instead of concatenating user input into SQL queries, use prepared statements that separate code from data.\n3. **Limit privileges**: Give users only the necessary permissions to perform their tasks.\n\nBy understanding how Command Injection works and taking proactive measures to prevent it, you\'ll be better equipped to safeguard your systems against such attacks!', 'session_id': '5a56b6a2-6c73-4040-bea1-344efd9333ef'}
+=== CHAT REQUEST COMPLETE ===
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 215)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 52
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 65)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 40
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 141)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 16
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 180)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing javascript code with pattern matching
+[DEBUG FALLBACK] Code length: 35
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 176)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 31
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 140)
+[DEBUG] JSON parsing failed, using fallback detection
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 32
+=== CHAT REQUEST RECEIVED ===
+DEBUG: session_id=86ecc337-8efa-4427-b467-f2a2d310d3cb
+DEBUG: message=Explain this input
+DEBUG: payload=<img src=x onerror=alert('XSS')>
+DEBUG: vulnerability_type=XSS
+DEBUG: lab_type=
+ ccomment
+ 
+DEBUG: Built prompt: You are NULLBOT, a cybersecurity tutor in a safe educational lab.
+
+Lab type: 
+ ccomment
+ 
+Payload: &...
+DEBUG: Added user message to session
+DEBUG: Retrieved 2 messages from session
+DEBUG: Calling LLM...
+DEBUG: LLM returned: **Nullbot here!**
+
+Let's analyze the payload: `<img src=x onerror=alert('XSS')>`
+
+This input is tryi...
+DEBUG: Added assistant response to session
+DEBUG: Returning: {'response': '**Nullbot here!**\n\nLet\'s analyze the payload: `<img src=x onerror=alert(\'XSS\')>`\n\nThis input is trying to inject malicious code into a website. Specifically, it\'s an example of a Cross-Site Scripting (XSS) attack.\n\nHere\'s what\'s happening:\n\n1. The `<img>` tag is attempting to load an image from the website.\n2. However, instead of loading an actual image, it\'s using the `onerror` attribute to execute some JavaScript code when there\'s an error loading the image.\n3. That JavaScript code tries to display a pop-up alert box with the message "XSS".\n\n**So, what does this mean for our lab?**\n\nIn a real-world scenario, if a user submits this input and it\'s not properly sanitized, an attacker could inject malicious scripts into the website, potentially stealing sensitive information or taking control of the user\'s session.\n\n**How can we prevent this?**\n\nTo avoid XSS attacks, websites should:\n\n1. **Validate user input**: Ensure that only expected data is entered.\n2. **Use proper output encoding**: Encode special characters to prevent them from being interpreted as code.\n3. **Sanitize user-submitted content**: Remove any malicious scripts or code before displaying it on the website.\n\nIn our lab, we\'ll continue to experiment with XSS payloads and learn how to defend against these types of attacks.\n\nWhat\'s your next question?', 'session_id': '86ecc337-8efa-4427-b467-f2a2d310d3cb'}
+=== CHAT REQUEST COMPLETE ===
+=== CHAT REQUEST RECEIVED ===
+DEBUG: session_id=666af81c-40e4-47b0-be4a-42dec6cca5e0
+DEBUG: message=Why is this considered malicious?
+DEBUG: payload=' or 1=1 --
+DEBUG: vulnerability_type=SQL Injection
+DEBUG: lab_type=
+ llogin
+ 
+DEBUG: Built prompt: You are NULLBOT, a cybersecurity tutor in a safe educational lab.
+
+Lab type: 
+ llogin
+ 
+Payload: ' o...
+DEBUG: Added user message to session
+DEBUG: Retrieved 2 messages from session
+DEBUG: Calling LLM...
+DEBUG: LLM returned: Let's analyze the payload: ` ' or 1=1 --`
+
+In SQL Injection attacks, malicious attackers try to inje...
+DEBUG: Added assistant response to session
+DEBUG: Returning: {'response': "Let's analyze the payload: ` ' or 1=1 --`\n\nIn SQL Injection attacks, malicious attackers try to inject their own SQL code into a web application's database queries. The goal is to manipulate the database's output and potentially gain unauthorized access.\n\nHere's what this specific payload does:\n\n* `'` is an apostrophe that closes the original SQL query.\n* `or 1=1` tries to trick the database into returning true (1) for any condition, allowing the attacker to bypass authentication or retrieve sensitive data.\n* `--` is a comment marker in SQL that tells the database to ignore everything after it.\n\nThis payload is considered malicious because it can potentially:\n\n* Bypass login credentials\n* Retrieve sensitive user data (e.g., passwords, credit card numbers)\n* Modify or delete database records\n\nTo prevent this vulnerability, web developers and administrators should:\n\n1. **Validate and sanitize user input**: Ensure that all user-inputted values are checked for malicious patterns and properly sanitized before being used in SQL queries.\n2. **Use parameterized queries**: Instead of concatenating user input into the query, use prepared statements or parameterized queries to separate the SQL code from user input.\n3. **Implement proper error handling**: Limit the amount of information returned to the attacker, making it harder for them to understand the database structure.\n\nBy following these best practices, you can significantly reduce the risk of a successful SQL Injection attack in your application.\n\nNow, let's move on to the next exercise! Do you have any questions about this explanation?", 'session_id': '666af81c-40e4-47b0-be4a-42dec6cca5e0'}
+=== CHAT REQUEST COMPLETE ===
+[DEBUG] JSON parsing error: Extra data: line 5 column 3 (char 189)
+[DEBUG] JSON parsing failed, using fallback detection127.0.0.1 - - [24/Mar/2026 11:05:27] "POST /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:06:16] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:06:20] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:06:25] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:06:37] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:06:37] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:06:39] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:07:16] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:07:28] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:08:05] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:08:08] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:08:22] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:08:41] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:09:02] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 11:09:02] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:19:27] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:19:27] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:19:40] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:19:49] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:19:50] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:19:53] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:21:51] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:21:51] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:23:03] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:23:07] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:23:35] "OPTIONS /chat HTTP/1.1" 200 -
+
+[DEBUG FALLBACK] Analyzing python code with pattern matching
+[DEBUG FALLBACK] Code length: 19
+=== CHAT REQUEST RECEIVED ===
+DEBUG: session_id=5ae7ad16-837c-404d-97b4-889e59246372
+DEBUG: message=Why is this considered malicious?
+DEBUG: payload=`whoami`
+DEBUG: vulnerability_type=Command Injection
+DEBUG: lab_type= pping 
+DEBUG: Built prompt: You are NULLBOT, a cybersecurity tutor in a safe educational lab.
+
+Lab type:  pping 
+Payload: `whoam...
+DEBUG: Added user message to session
+DEBUG: Retrieved 2 messages from session
+DEBUG: Calling LLM...
+DEBUG: LLM returned: Welcome to our secure lab! I'm happy to help you understand why `whoami` is considered malicious in ...
+DEBUG: Added assistant response to session
+DEBUG: Returning: {'response': "Welcome to our secure lab! I'm happy to help you understand why `whoami` is considered malicious in this context.\n\n**What's happening:**\n\nIn our lab, we're simulating a scenario where an attacker might try to inject commands into a system. The payload `whoami` is a simple Linux command that displays the current user's identity.\n\n**The issue:**\n\nWhen an attacker injects `whoami` into a vulnerable application, it can execute this command, revealing sensitive information about the system or user. This can lead to unauthorized access or exploitation of privileges.\n\n**Why is it malicious?**\n\nIn our lab, we have a specific vulnerability set up – Command Injection. This occurs when user input (in this case, `whoami`) is not properly sanitized or validated by the application, allowing an attacker to inject and execute system commands.\n\nTo illustrate, imagine you're using a web app that asks for your name. If the app doesn't check user input carefully, an attacker could submit `whoami` instead of their actual name. The app would then execute `whoami`, revealing sensitive information about the system or user.\n\n**Prevention:**\n\nTo avoid Command Injection vulnerabilities:\n\n1.  **Input Validation:** Always verify and sanitize user input to ensure it matches expected formats.\n2.  **Escape User Input:** Use techniques like parameterized queries or prepared statements to prevent injection attacks.\n3.  **Use Safe Functions:** When executing system commands, use built-in functions that provide a layer of protection against malicious inputs.\n\nIn our lab, we're working on understanding and mitigating Command Injection vulnerabilities. By knowing how these threats work, you'll be better equipped to create secure applications and protect systems from attacks like this one!", 'session_id': '5ae7ad16-837c-404d-97b4-889e59246372'}
+=== CHAT REQUEST COMPLETE ===
+=== CHAT REQUEST RECEIVED ===
+DEBUG: session_id=5ae7ad16-837c-404d-97b4-889e59246372
+DEBUG: message=who is saurav
+DEBUG: payload=`whoami`
+DEBUG: vulnerability_type=Command Injection
+DEBUG: lab_type= pping 
+DEBUG: Built prompt: You are NULLBOT, a cybersecurity tutor in a safe educational lab.
+
+Lab type:  pping 
+Payload: `whoam...
+DEBUG: Added user message to session
+DEBUG: Retrieved 4 messages from session
+DEBUG: Calling LLM...
+DEBUG: LLM returned: Let's explore this scenario in our secure lab.
+
+**Your Input:**
+
+You entered `saurav` as your respon...
+DEBUG: Added assistant response to session
+DEBUG: Returning: {'response': "Let's explore this scenario in our secure lab.\n\n**Your Input:**\n\nYou entered `saurav` as your response, but what if you didn't? What if an attacker injected malicious input instead of a legitimate name?\n\n**The Vulnerability:**\n\nAs we've discussed earlier, the `whoami` payload is being used to exploit a Command Injection vulnerability. In this case, when you enter a value like `saurav`, it gets passed to the application as user input.\n\n**The Issue:**\n\nThe application doesn't properly validate or sanitize your input. An attacker could take advantage of this by submitting malicious commands, not just legitimate names. If an attacker were to inject something like `whoami && id -a`, they could potentially gather sensitive information about system users and privileges.\n\n**Prevention:**\n\nTo prevent Command Injection vulnerabilities:\n\n1.  **Input Validation:** Always verify user input to ensure it matches expected formats.\n2.  **Escape User Input:** Use techniques like parameterized queries or prepared statements to prevent injection attacks.\n3.  **Use Safe Functions:** When executing system commands, use built-in functions that provide a layer of protection against malicious inputs.\n\n**Lab Takeaway:**\n\nIn our lab, we're focused on understanding Command Injection vulnerabilities and how they can be exploited by attackers. By knowing the risks associated with unvalidated user input, you'll be better equipped to create secure applications and protect systems from attacks like this one!", 'session_id': '5ae7ad16-837c-404d-97b4-889e59246372'}
+=== CHAT REQUEST COMPLETE ===
+=== CHAT REQUEST RECEIVED ===
+DEBUG: session_id=23c0684c-8b11-497c-85f9-2680e42bc777
+DEBUG: message=explain everything about the input and how it works
+DEBUG: payload=' or 1=1 --
+DEBUG: vulnerability_type=SQL Injection
+DEBUG: lab_type=
+ llogin
+ 
+DEBUG: Built prompt: You are NULLBOT, a cybersecurity tutor in a safe educational lab.
+
+Lab type: 
+ llogin
+ 
+Payload: ' o...
+DEBUG: Added user message to session
+DEBUG: Retrieved 2 messages from session
+DEBUG: Calling LLM...
+DEBUG: LLM returned: **Welcome to our secure lab!**
+
+You've introduced a potential security risk by injecting malicious i...
+DEBUG: Added assistant response to session
+DEBUG: Returning: {'response': '**Welcome to our secure lab!**\n\nYou\'ve introduced a potential security risk by injecting malicious input into our system. Let\'s break down what\'s happening.\n\n**The Payload: `or 1=1 --`**\n\nThis payload is the input you\'re providing that\'s causing issues. It appears to be related to SQL (Structured Query Language), which is used to interact with databases. \n\n- `\' or 1=1 --`: The single quotes (`\'`) are used to start and end a string in SQL, but they can also be used as comments.\n- `or 1=1`: This is where things get interesting. In SQL, the `OR` operator is used for conditional statements. Here, it\'s saying "if either condition is true." In this case, the two conditions are:\n  - The first condition (`1`) is always true because in mathematics and computer science, `1` equals `true`. This is known as a Boolean value.\n  - The second condition (`=1`) is another way of checking if something is equal to itself. It will always return `true`.\n- `--`: This double dash marks the end of a SQL comment. Anything after this point on the same line is ignored by the database.\n\n**How it Works**\n\nWhen you enter this payload, the database interprets it as saying: "Is true or 1 equal to itself?" Since both sides are identical and always return `true`, the database will treat the entire condition as `true`.\n\nThis can allow an attacker to bypass certain checks and view data they shouldn\'t have access to. In a real-world scenario, this could be used for malicious purposes like stealing sensitive information or manipulating data.\n\n**Prevention is Key**\n\nTo prevent SQL Injection attacks:\n1. **Validate User Input**: Always check the input provided by users. If it looks suspicious or doesn\'t match expected formats, reject it.\n2. **Use Prepared Statements**: These are pre-compiled queries that separate user input from the database query itself. This makes it harder for attackers to inject malicious SQL code because their input is not directly integrated into the query.\n3. **Implement Parameterized Queries**: Similar to prepared statements, but these are specifically designed for specific operations like filtering or inserting data.\n\n**Your Turn**\n\nTo further understand and practice preventing SQL Injection attacks, we have a lab activity where you can experiment with safe and controlled SQL queries while exploring how input validation and parameterized queries work. Are you ready to move on?', 'session_id': '23c0684c-8b11-497c-85f9-2680e42bc777'}
+=== CHAT REQUEST COMPLETE ===
+=== CHAT REQUEST RECEIVED ===
+DEBUG: session_id=915ed4aa-0e58-4ada-9aa6-838fdd447add127.0.0.1 - - [24/Mar/2026 12:23:46] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:24:15] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:24:19] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:24:46] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:24:50] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:24:58] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:24:59] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:25:33] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:25:37] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:25:42] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:25:42] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:26:37] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:26:37] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:26:47] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:26:47] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:27:26] "OPTIONS /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 12:27:30] "POST /ping_analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:14:17] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:14:17] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:14:40] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:14:46] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:15:07] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:15:19] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:15:51] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:15:51] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:16:02] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:16:02] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:16:17] "OPTIONS /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:16:20] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:20:28] "OPTIONS /analyze_code HTTP/1.1" 200 -
+127.0.0.1 - - [24/Mar/2026 13:20:37] "POST /analyze_code HTTP/1.1" 200 -

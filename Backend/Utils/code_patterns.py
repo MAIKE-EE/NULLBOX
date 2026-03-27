@@ -27,6 +27,13 @@ def get_python_patterns():
             'solution': 'Use query parameters or ORM with built-in sanitization',
             'example': 'Use SQLAlchemy or Django ORM with parameterized queries'
         },
+        {
+            'pattern': re.compile(r'["\']\s*\+\s*\w+_input', re.IGNORECASE),
+            'mistake': 'String concatenation with user input variable in SQL query',
+            'explanation': 'Directly concatenating user input variables into SQL queries allows attackers to inject malicious SQL commands',
+            'solution': 'Use parameterized queries or prepared statements',
+            'example': 'cursor.execute("SELECT * FROM users WHERE id = %s", (user_id,))'
+        },
         # Command Injection patterns
         {
             'pattern': re.compile(r'os\.system\s*\(.*input', re.IGNORECASE),

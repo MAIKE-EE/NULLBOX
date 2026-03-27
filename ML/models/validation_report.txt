@@ -1,0 +1,10 @@
+                   precision    recall  f1-score   support
+
+           Benign       0.90      1.00      0.95       940
+    SQL Injection       1.00      0.99      0.99       937
+              XSS       1.00      1.00      1.00       939
+Command Injection       1.00      0.91      0.95       939
+
+         accuracy                           0.97      3755
+        macro avg       0.97      0.97      0.97      3755
+     weighted avg       0.97      0.97      0.97      3755

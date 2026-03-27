@@ -1,0 +1,720 @@
+/* DISCORD DARK THEME - CSS Variables */
+:root {
+  --background-primary: #1a1b1e;
+  --background-secondary: #2f3136;
+  --background-tertiary: #202225;
+  --background-accent: #40444b;
+  --text-normal: #dcddde;
+  --text-muted: #72767d;
+  --text-link: #00aff4;
+  --interactive-normal: #b9bbbe;
+  --interactive-hover: #dcddde;
+  --interactive-active: #ffffff;
+  --interactive-muted: #4f545c;
+  --brand-experiment: #967bb6;
+  --brand-experiment-560: #b19cd9;
+  --header-primary: #ffffff;
+  --header-secondary: #b9bbbe;
+  --red: #ed4245;
+  --green: #3ba55c;
+  --yellow: #faa61a;
+  --purple: #5865f2;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  background: var(--background-primary);
+  color: var(--text-normal);
+}
+
+/* MAIN LAYOUT */
+.app-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  background: var(--background-primary);
+}
+
+/* LEFT PANEL */
+.left-panel {
+  display: flex;
+ flex-direction: column;
+  flex: 2;
+  transition: all 0.3s ease;
+  background: var(--background-secondary);
+  border-right: 1px solid var(--background-tertiary);
+}
+
+/* REMOVE OLD THEMES - Unified Dark Theme */
+.login-theme, .comment-theme {
+  background: var(--background-secondary);
+}
+
+/* LAB TABS - Modern Dark */
+.lab-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  background: var(--background-tertiary);
+  padding: 20px 0;
+  padding-top: 40px;
+}
+
+.tab {
+  padding: 16px 0;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: none;
+  background: transparent;
+  color: var(--interactive-normal);
+  position: relative;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  margin: 8px;
+}
+
+.tab:hover {
+  background: var(--background-accent);
+  color: var(--interactive-hover);
+}
+
+.tab.active {
+  background: var(--brand-experiment);
+  color: var(--interactive-active);
+}
+
+/* PROJECT HEADER */
+.project-header {
+  padding: 20px 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #5865F2;
+  text-align: left;
+  border-bottom: 1px solid var(--background-tertiary);
+  letter-spacing: 0.5px;
+}
+
+/* COLLAPSIBLE TABS */
+.lab-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 60px; /* Collapsed width */
+  background: var(--background-secondary);
+ padding: 20px 0;
+ margin-top: 8px; /* Gap between NULLBOX and tabs */
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.lab-tabs:hover {
+  width: 180px; /* Expanded width */
+}
+
+/* TAB STYLES FOR COLLAPSE/EXPAND */
+.tab {
+  padding: 16px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: none;
+  background: transparent;
+  color: var(--interactive-normal);
+  position: relative;
+  margin: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tab-short {
+  display: block;
+  min-width: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+
+.tab-full {
+  display: none;
+  opacity: 0;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.lab-tabs:hover .tab-full {
+  display: block;
+  opacity: 1;
+}
+
+.lab-tabs:hover .tab-short {
+ opacity: 0;
+ width: 0;
+ overflow: hidden;
+ margin-left: -20px;
+ transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background: var(--background-accent);
+  color: var(--interactive-hover);
+}
+
+.tab.active {
+  background: var(--brand-experiment);
+  color: var(--interactive-active);
+}
+
+
+/* LAB AREA - Modern Card Style */
+.lab-area {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-secondary);
+}
+
+.lab-area h2 {
+  margin: 0 0 30px 0;
+  color: var(--header-primary);
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* INPUTS - Modern Glassmorphism */
+input, textarea {
+  width: 100%;
+  max-width: 420px;
+  padding: 14px 18px;
+  margin: 12px 0;
+  font-size: 16px;
+  background: var(--background-tertiary);
+  border: 1px solid var(--background-tertiary);
+  border-radius: 8px;
+  color: var(--text-normal);
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--brand-experiment);
+  box-shadow: 0 0 0 2px rgba(150, 123, 182, 0.2);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: 'Consolas', 'Monaco', monospace;
+  background: var(--background-tertiary);
+}
+
+/* BUTTONS - Modern 3D Effect */
+.lab-area button {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 16px;
+  min-width: 140px;
+  background: var(--brand-experiment);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lab-area button:hover {
+  background: var(--brand-experiment-560);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(150, 123, 182, 0.3);
+}
+
+.lab-area button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* EXPLANATION AREA - Discord Dark */
+.explanation-area {
+  flex: 1;
+  padding: 40px;
+  background: var(--background-secondary);
+  border-left: 1px solid var(--background-tertiary);
+  overflow-y: auto;
+}
+
+.explanation-area h2 {
+  margin: 0 0 24px 0;
+  color: var(--header-primary);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.explanation-area code {
+  background: var(--background-tertiary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  color: var(--text-normal);
+}
+
+#explanationPanel {
+  line-height: 1.6;
+  font-size: 16px;
+  color: var(--text-normal);
+}
+
+/* CODE ANALYZER BUTTON - Floating Action Button Style */
+.code-analyzer-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1000;
+  border: none;
+  background: var(--brand-experiment);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(150, 123, 182, 0.4),
+              0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  min-width: 220px;
+}
+
+.code-analyzer-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(150, 123, 182, 0.5),
+              0 6px 16px rgba(0, 0, 0, 0.3);
+  background: var(--brand-experiment-560);
+}
+
+.code-analyzer-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 4px 12px rgba(150, 123, 182, 0.3),
+              0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d-effect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.btn-subtext {
+  font-size: 12px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* CODE ANALYZER MODAL - Modern Dark */
+.code-analyzer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-primary);
+  z-index: 2000;
+  display: none;
+  flex-direction: column;
+}
+
+.code-analyzer-modal.active {
+  display: flex;
+}
+
+.modal-header {
+  background: var(--background-tertiary);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--background-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-link {
+  color: var(--text-link);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  background: var(--background-accent);
+  text-decoration: none;
+}
+
+.modal-title {
+  color: var(--header-primary);
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 30px;
+  letter-spacing: 0.5px;
+}
+
+.modal-content {
+  display: flex;
+  flex: 1;
+  padding: 30px;
+  gap: 30px;
+  overflow: hidden;
+}
+
+/* CODE INPUT PANEL - Terminal Style */
+.code-input-panel {
+  flex: 1;
+  background: var(--background-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--background-accent);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.terminal-header {
+  background: var(--background-tertiary);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--background-accent);
+}
+
+.terminal-title {
+  color: var(--header-secondary);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.code-input-area {
+  flex: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.language-selector {
+  display: flex;
+  justify-content: center;
+}
+
+.lang-dropdown {
+  background: var(--background-tertiary);
+  color: var(--text-normal);
+  border: 1px solid var(--background-accent);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 180px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.lang-dropdown:hover {
+  background: var(--background-accent);
+  border-color: var(--brand-experiment);
+}
+
+.lang-dropdown:focus {
+  outline: none;
+  border-color: var(--brand-experiment);
+}
+
+.code-textarea {
+  width: 100%;
+  height: 200px;
+  background: var(--background-tertiary);
+  color: var(--text-normal);
+  border: 1px solid var(--background-accent);
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;
+  overflow: auto;
+  transition: all 0.2s ease;
+}
+
+.code-textarea:focus {
+  outline: none;
+  border-color: var(--brand-experiment);
+  box-shadow: 0 0 0 2px rgba(150, 123, 182, 0.2);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.analyze-btn, .clear-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+.analyze-btn {
+  background: var(--brand-experiment);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.analyze-btn:hover {
+  background: var(--brand-experiment-560);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(150, 123, 182, 0.3);
+}
+
+.clear-btn {
+  background: var(--background-accent);
+  color: var(--text-muted);
+  border: 1px solid var(--background-tertiary);
+}
+
+.clear-btn:hover {
+  background: var(--interactive-muted);
+  color: var(--text-normal);
+  transform: translateY(-2px);
+}
+
+/* RESULTS PANEL - Dark Theme */
+.results-panel {
+  flex: 1;
+  background: var(--background-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--background-accent);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.results-header {
+  background: var(--background-tertiary);
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--background-accent);
+}
+
+.results-title {
+  color: var(--header-secondary);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.results-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  color: var(--text-normal);
+}
+
+.welcome-message {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.welcome-message h3 {
+  color: var(--header-primary);
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.welcome-message p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.welcome-message p strong {
+  color: var(--text-normal);
+}
+
+.vuln-list {
+  text-align: left;
+  margin: 25px auto;
+  max-width: 500px;
+  padding-left: 20px;
+  color: var(--text-muted);
+}
+
+.vuln-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.vuln-list li strong {
+  color: var(--text-normal);
+}
+
+/* VULNERABILITY REPORT STYLES - Modern Cards */
+.vulnerability-report {
+  background: var(--background-tertiary);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--background-accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vuln-header {
+  background: var(--red);
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(237, 66, 69, 0.3);
+}
+
+.no-vuln {
+  background: var(--background-tertiary);
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(59, 165, 92, 0.2);
+}
+
+.vuln-item {
+  background: var(--background-primary);
+  border-left: 4px solid var(--brand-experiment);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vuln-item:hover {
+  background: var(--background-accent);
+  transform: translateX(4px);
+}
+
+.vuln-line {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.line-number {
+  background: var(--red);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.vuln-mistake {
+  color: var(--yellow);
+  margin: 12px 0;
+  padding-left: 24px;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.vuln-explanation {
+  color: var(--text-link);
+  margin: 12px 0;
+  padding-left: 24px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.vuln-solution {
+  color: var(--green);
+  margin: 12px 0;
+  font-weight: 700;
+  padding-left: 24px;
+  font-size: 15px;
+}
+
+.solution-code {
+  background: var(--background-tertiary);
+  color: var(--green);
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  border: 1px solid var(--background-accent);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+/* SCROLLBAR STYLING - Discord Style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--background-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--interactive-normal);
+}

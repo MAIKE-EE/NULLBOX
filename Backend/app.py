@@ -8,15 +8,16 @@ import os
 # Ensure backend folder is in Python path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
+
 def create_app():
     app = Flask(__name__)
 
     # Enable CORS for frontend-backend communication
     CORS(app)
 
-    # Register blueprints
-    app.register_blueprint(analyze_bp)
+    # Register blueprints (order matters! code_analyzer_bp first to avoid route conflicts)
     app.register_blueprint(code_analyzer_bp)
+    app.register_blueprint(analyze_bp)
 
     @app.route("/")
     def health_check():
