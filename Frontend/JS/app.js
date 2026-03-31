@@ -3,368 +3,368 @@ const chatStyles = `
 <style id="chat-styles">
 /* NULLBOT CHAT ICON - Floating Messenger Style */
 .chat-icon-container {
- position: fixed;
- bottom: 30px;
- right: 30px;
- z-index: 1500;
- display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1500;
+  display: none;
 }
 
 .chat-icon-container.show {
- display: block;
- animation: slideUp 0.3s ease-out;
+  display: block;
+  animation: slideUp 0.3s ease-out;
 }
 
 .chat-icon {
- padding: 12px 24px;
- background: var(--brand-experiment);
- border: none;
- border-radius: 8px;
- cursor: pointer;
- box-shadow: 0 8px 24px rgba(150, 123, 182, 0.4),
- 0 4px 12px rgba(0, 0, 0, 0.2);
- display: flex;
- align-items: center;
- justify-content: center;
- transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
- position: relative;
- font-size: 14px;
- font-weight: 600;
- color: white;
- text-transform: uppercase;
- letter-spacing: 0.5px;
+  padding: 12px 24px;
+  background: var(--brand-experiment);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(150, 123, 182, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .chat-icon:hover {
- transform: translateY(-4px);
- box-shadow: 0 12px 28px rgba(150, 123, 182, 0.5),
- 0 6px 16px rgba(0, 0, 0, 0.3);
- background: var(--brand-experiment-560);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(150, 123, 182, 0.5),
+    0 6px 16px rgba(0, 0, 0, 0.3);
+  background: var(--brand-experiment-560);
 }
 
 .chat-icon::before {
- content: "learn more";
+  content: "learn more";
 }
 
 /* NOTIFICATION BUBBLE - Messenger Style */
 .notification-bubble {
- position: absolute;
- bottom: 70px;
- right: 0;
- background: var(--brand-experiment);
- border: 1px solid var(--background-accent);
- border-radius: 12px;
- padding: 12px 16px;
- box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
- min-width: 250px;
- opacity: 0;
- transform: translateY(10px);
- transition: all 0.3s ease;
- font-size: 14px;
- color: white;
- line-height: 1.4;
- white-space: nowrap;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: var(--brand-experiment);
+  border: 1px solid var(--background-accent);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  min-width: 250px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: white;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 .notification-bubble.show {
- opacity: 1;
- transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .notification-bubble::after {
- content: "";
- position: absolute;
- bottom: -8px;
- right: 20px;
- width: 0;
- height: 0;
- border-left: 8px solid transparent;
- border-right: 8px solid transparent;
- border-top: 8px solid var(--background-accent);
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--background-accent);
 }
 
 /* CHATBOX CONTAINER */
 .chat-box {
- position: fixed;
- bottom: 100px;
- right: 30px;
- width: 340px;
- height: 450px;
- background: var(--background-secondary);
- border: 1px solid var(--background-accent);
- border-radius: 12px;
- box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
- z-index: 2000;
- display: none;
- flex-direction: column;
- overflow: hidden;
- transform: scale(0.8) translateY(20px);
- opacity: 0;
- transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 340px;
+  height: 450px;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-accent);
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+  z-index: 2000;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.8) translateY(20px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .chat-box.open {
- display: flex;
- transform: scale(1) translateY(0);
- opacity: 1;
+  display: flex;
+  transform: scale(1) translateY(0);
+  opacity: 1;
 }
 
 /* CHAT HEADER */
 .chat-header {
- background: var(--background-tertiary);
- padding: 16px 20px;
- border-bottom: 1px solid var(--background-accent);
- display: flex;
- justify-content: space-between;
- align-items: center;
+  background: var(--background-tertiary);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--background-accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .chat-title {
- color: var(--header-primary);
- font-size: 18px;
- font-weight: 700;
- margin: 0;
+  color: var(--header-primary);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
 }
 
 .chat-subtitle {
- color: var(--header-secondary);
- font-size: 12px;
- margin: 0;
+  color: var(--header-secondary);
+  font-size: 12px;
+  margin: 0;
 }
 
 .chat-close {
- background: none;
- border: none;
- color: var(--interactive-normal);
- font-size: 24px;
- cursor: pointer;
- padding: 4px 8px;
- border-radius: 4px;
- transition: all 0.2s ease;
+  background: none;
+  border: none;
+  color: var(--interactive-normal);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
 .chat-close:hover {
- background: var(--background-accent);
- color: var(--interactive-hover);
+  background: var(--background-accent);
+  color: var(--interactive-hover);
 }
 
 /* MESSAGES AREA */
 .chat-messages {
- flex: 1;
- padding: 20px;
- overflow-y: auto;
- display: flex;
- flex-direction: column;
- gap: 12px;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 /* MESSAGE BUBBLES */
 .message {
- max-width: 85%;
- padding: 10px 14px;
- border-radius: 12px;
- font-size: 14px;
- line-height: 1.4;
- word-wrap: break-word;
- animation: slideUp 0.2s ease-out;
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  animation: slideUp 0.2s ease-out;
 }
 
 .message.user {
- background: var(--brand-experiment);
- color: white;
- align-self: flex-end;
- border-bottom-right-radius: 4px;
+  background: var(--brand-experiment);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
 }
 
 .message.bot {
- background: var(--background-tertiary);
- color: var(--text-normal);
- align-self: flex-start;
- border-bottom-left-radius: 4px;
+  background: var(--background-tertiary);
+  color: var(--text-normal);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
 }
 
 /* PRESET OPTIONS */
 .preset-options {
- display: flex;
- flex-direction: column;
- gap: 8px;
- padding: 0 20px 16px;
- border-bottom: 1px solid var(--background-accent);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 20px 16px;
+  border-bottom: 1px solid var(--background-accent);
 }
 
 .preset-option {
- background: var(--background-tertiary);
- border: 1px solid var(--background-accent);
- border-radius: 8px;
- padding: 10px 14px;
- cursor: pointer;
- color: var(--text-normal);
- font-size: 14px;
- transition: all 0.2s ease;
- text-align: left;
+  background: var(--background-tertiary);
+  border: 1px solid var(--background-accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: var(--text-normal);
+  font-size: 14px;
+  transition: all 0.2s ease;
+  text-align: left;
 }
 
 .preset-option:hover {
- background: var(--background-accent);
- border-color: var(--brand-experiment);
- transform: translateX(4px);
+  background: var(--background-accent);
+  border-color: var(--brand-experiment);
+  transform: translateX(4px);
 }
 
 /* CHAT INPUT */
 .chat-input-container {
- border-top: 1px solid var(--background-accent);
- padding: 16px;
- display: flex;
- gap: 10px;
- align-items: center;
+  border-top: 1px solid var(--background-accent);
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .chat-input {
- flex: 1;
- background: var(--background-tertiary);
- border: 1px solid var(--background-accent);
- border-radius: 20px;
- padding: 10px 16px;
- color: var(--text-normal);
- font-size: 14px;
- outline: none;
- transition: all 0.2s ease;
+  flex: 1;
+  background: var(--background-tertiary);
+  border: 1px solid var(--background-accent);
+  border-radius: 20px;
+  padding: 10px 16px;
+  color: var(--text-normal);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
 }
 
 .chat-input:focus {
- border-color: var(--brand-experiment);
- box-shadow: 0 0 0 2px rgba(150, 123, 182, 0.2);
+  border-color: var(--brand-experiment);
+  box-shadow: 0 0 0 2px rgba(150, 123, 182, 0.2);
 }
 
 .chat-send {
- background: var(--brand-experiment);
- border: none;
- border-radius: 50%;
- width: 36px;
- height: 36px;
- cursor: pointer;
- display: flex;
- align-items: center;
- justify-content: center;
- transition: all 0.2s ease;
+  background: var(--brand-experiment);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
 }
 
 .chat-send:hover {
- background: var(--brand-experiment-560);
- transform: scale(1.1);
+  background: var(--brand-experiment-560);
+  transform: scale(1.1);
 }
 
 .chat-send::before {
- content: "➤";
- color: white;
- font-size: 16px;
+  content: "➤";
+  color: white;
+  font-size: 16px;
 }
 
 /* TYPING INDICATOR */
 .typing-indicator {
- background: var(--background-tertiary);
- border-radius: 12px;
- padding: 10px 14px;
- margin-bottom: 12px;
- font-size: 14px;
- color: var(--text-muted);
- font-style: italic;
- align-self: flex-start;
- border-bottom-left-radius: 4px;
- opacity: 0;
- animation: fadeIn 0.3s ease-out forwards;
+  background: var(--background-tertiary);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+  font-style: italic;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .typing-indicator.show {
- display: flex !important;
- align-items: center;
- gap: 8px;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
 }
 
 .typing-text {
- margin-right: 8px;
+  margin-right: 8px;
 }
 
 .typing-dots {
- display: flex;
- gap: 3px;
+  display: flex;
+  gap: 3px;
 }
 
 .typing-dots span {
- width: 6px;
- height: 6px;
- background: var(--brand-experiment);
- border-radius: 50%;
- animation: typingDot 1.4s infinite;
+  width: 6px;
+  height: 6px;
+  background: var(--brand-experiment);
+  border-radius: 50%;
+  animation: typingDot 1.4s infinite;
 }
 
 .typing-dots span:nth-child(2) {
- animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .typing-dots span:nth-child(3) {
- animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 @keyframes typingDot {
  0%, 60%, 100% {
- transform: translateY(0);
- opacity: 0.7;
+   transform: translateY(0);
+   opacity: 0.7;
  }
  30% {
- transform: translateY(-10px);
- opacity: 1;
+   transform: translateY(-10px);
+   opacity: 1;
  }
 }
 
 /* MESSAGE ANIMATION */
 .message {
- animation: fadeIn 0.4s ease-out;
+  animation: fadeIn 0.4s ease-out;
 }
 
 @keyframes fadeIn {
  from {
- opacity: 0;
- transform: translateY(10px) scale(0.95);
+   opacity: 0;
+   transform: translateY(10px) scale(0.95);
  }
  to {
- opacity: 1;
- transform: translateY(0) scale(1);
+   opacity: 1;
+   transform: translateY(0) scale(1);
  }
 }
 
 /* DISABLED INPUT */
 .chat-input:disabled {
- opacity: 0.5;
- cursor: not-allowed;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* SMOOTH SCROLL */
 .chat-messages {
- scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* ANIMATIONS */
 @keyframes slideUp {
  from {
- opacity: 0;
- transform: translateY(20px);
+   opacity: 0;
+   transform: translateY(20px);
  }
  to {
- opacity: 1;
- transform: translateY(0);
+   opacity: 1;
+   transform: translateY(0);
  }
 }
 
 @media (max-width: 768px) {
  .chat-box {
- width: 90vw;
- right: 5vw;
+   width: 90vw;
+   right: 5vw;
  }
 
  .chat-icon-container {
- right: 20px;
- bottom: 20px;
+   right: 20px;
+   bottom: 20px;
  }
 }
 </style>
@@ -400,1061 +400,1119 @@ const resultsContent = document.getElementById("resultsContent");
 
 /* ---------- Utilities ---------- */
 function setActiveTab(tabClass) {
- tabs.forEach(tab => tab.classList.remove("active"));
- const activeTab = document.querySelector(`.${tabClass}`);
- if (activeTab) {
- activeTab.classList.add("active");
- }
+  tabs.forEach(tab => tab.classList.remove("active"));
+  const activeTab = document.querySelector(`.${tabClass}`);
+  if (activeTab) {
+    activeTab.classList.add("active");
+  }
 }
 
 async function analyzePayload(payload) {
- if (!payload) {
- explanation.innerText = "Enter a payload to analyze.";
- return;
- }
+  if (!payload) {
+    explanation.innerText = "Enter a payload to analyze.";
+    return;
+  }
 
- try {
- const lab_type = document.querySelector(".tab.active").textContent.toLowerCase();
+  try {
+    const lab_type = document.querySelector(".tab.active").textContent.toLowerCase();
 
- const res = await fetch("http://127.0.0.1:5000/analyze", {
- method: "POST",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({
- payload: payload,
- lab_type: lab_type
- })
- });
+    const res = await fetch("http://127.0.0.1:5000/analyze", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        payload: payload,
+        lab_type: lab_type
+      })
+    });
 
- if (!res.ok) {
- throw new Error(`HTTP error! status: ${res.status}`);
- }
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
 
- const data = await res.json();
- // Format ML model output
-      const isMalicious = data.is_vulnerable ? "yes" : "no";
-      const formattedOutput = `
-        <div style="font-family: monospace; line-height: 1.6;">
-          <div>malicious: ${isMalicious}</div>
-          <div>type: ${isMalicious === "yes" ? (data.vulnerability_type || "N/A") : "Benign"}</div>
-          <div>confidence: ${data.confidence !== undefined ? data.confidence.toFixed(2) : "N/A"}</div>
-        </div>
-      `;
-      explanation.innerHTML = formattedOutput;
-  lastMlResult = formattedOutput;
+    const data = await res.json();
+    // Format ML model output
+    const isMalicious = data.is_vulnerable ? "yes" : "no";
+    const formattedOutput = `
+      <div style="font-family: monospace; line-height: 1.6;">
+        <div>malicious: ${isMalicious}</div>
+        <div>type: ${isMalicious === "yes" ? (data.vulnerability_type || "N/A") : "Benign"}</div>
+        <div>confidence: ${data.confidence !== undefined ? data.confidence.toFixed(2) : "N/A"}</div>
+      </div>
+    `;
+    explanation.innerHTML = formattedOutput;
+    lastMlResult = formattedOutput;
 
- // Show chat if vulnerable
- if (data.is_vulnerable) {
- showChat(payload, data.vulnerability_type, lab_type, data.session_id);
- }
+    // Show chat if vulnerable
+    if (data.is_vulnerable) {
+      showChat(payload, data.vulnerability_type, lab_type, data.session_id);
+    }
 
- } catch (err) {
- console.error("Analyzer error:", err);
- explanation.innerText = `Analyzer error: ${err.message}`;
- }
+  } catch (err) {
+    console.error("Analyzer error:", err);
+    explanation.innerText = `Analyzer error: ${err.message}`;
+  }
 }
 
 /* ---------- CODE ANALYZER FUNCTIONS ---------- */
 function openCodeAnalyzer() {
- codeAnalyzerModal.classList.add("active");
- document.body.style.overflow = "hidden";
+  codeAnalyzerModal.classList.add("active");
+  document.body.style.overflow = "hidden";
 
- // Show welcome message
- resultsContent.innerHTML = `
- <div class="welcome-message">
- <h3>Welcome to Static Code Analyzer</h3>
- <p>Enter your code in the left panel and select the programming language.</p>
- <p>The analyzer will check for common input-related vulnerabilities:</p>
- <ul class="vuln-list">
- <li><strong>SQL Injection</strong> - Unsanitized database queries</li>
- <li><strong>Cross-Site Scripting (XSS)</strong> - Unsafe HTML rendering</li>
- <li><strong>Command Injection</strong> - Unsafe system commands</li>
- <li><strong>Eval Injection</strong> - Dangerous eval() usage</li>
+  // Show welcome message
+  resultsContent.innerHTML = `
+    <div class="welcome-message">
+      <h3>Welcome to Static Code Analyzer</h3>
+      <p>Enter your code in the left panel and select the programming language.</p>
+      <p>The analyzer will check for common input-related vulnerabilities:</p>
+      <ul class="vuln-list">
+        <li><strong>SQL Injection</strong> - Unsanitized database queries</li>
+        <li><strong>Cross-Site Scripting (XSS)</strong> - Unsafe HTML rendering</li>
+        <li><strong>Command Injection</strong> - Unsafe system commands</li>
+        <li><strong>Eval Injection</strong> - Dangerous eval() usage</li>
 
- </ul>
- <p>Click "Analyze Code" to begin.</p>
- </div>
- `;
+      </ul>
+      <p>Click "Analyze Code" to begin.</p>
+    </div>
+  `;
 }
 
 function closeCodeAnalyzer() {
- codeAnalyzerModal.classList.remove("active");
- document.body.style.overflow = "";
+  codeAnalyzerModal.classList.remove("active");
+  document.body.style.overflow = "";
 }
 
 function clearCode() {
- codeInput.value = "";
- resultsContent.innerHTML = `
- <div class="welcome-message">
- <h3>Welcome to Static Code Analyzer</h3>
- <p>Enter your code in the left panel and select the programming language.</p>
- <p>The analyzer will check for common input-related vulnerabilities:</p>
- <ul class="vuln-list">
- <li><strong>SQL Injection</strong> - Unsanitized database queries</li>
- <li><strong>Cross-Site Scripting (XSS)</strong> - Unsafe HTML rendering</li>
- <li><strong>Command Injection</strong> - Unsafe system commands</li>
- <li><strong>Eval Injection</strong> - Dangerous eval() usage</li>
- </ul>
- <p>Click "Analyze Code" to begin.</p>
- </div>
- `;
+  codeInput.value = "";
+  resultsContent.innerHTML = `
+    <div class="welcome-message">
+      <h3>Welcome to Static Code Analyzer</h3>
+      <p>Enter your code in the left panel and select the programming language.</p>
+      <p>The analyzer will check for common input-related vulnerabilities:</p>
+      <ul class="vuln-list">
+        <li><strong>SQL Injection</strong> - Unsanitized database queries</li>
+        <li><strong>Cross-Site Scripting (XSS)</strong> - Unsafe HTML rendering</li>
+        <li><strong>Command Injection</strong> - Unsafe system commands</li>
+        <li><strong>Eval Injection</strong> - Dangerous eval() usage</li>
+      </ul>
+      <p>Click "Analyze Code" to begin.</p>
+    </div>
+  `;
 }
 
 async function analyzeCode() {
- const code = codeInput.value.trim();
- const language = languageSelect.value;
+  const code = codeInput.value.trim();
+  const language = languageSelect.value;
 
- if (!code) {
- resultsContent.innerHTML = `
- <div class="vulnerability-report">
- <div class="vuln-header">No Code Entered</div>
- <div style="text-align: center; padding: 20px; color: #ff9966;">
- Please enter some code to analyze.
- </div>
- </div>
- `;
- return;
- }
+  if (!code) {
+    resultsContent.innerHTML = `
+      <div class="vulnerability-report">
+        <div class="vuln-header">No Code Entered</div>
+        <div style="text-align: center; padding: 20px; color: #ff9966;">
+          Please enter some code to analyze.
+        </div>
+      </div>
+    `;
+    return;
+  }
 
- // Show loading state
- resultsContent.innerHTML = `
- <div class="welcome-message">
- <h3>Analyzing Code...</h3>
- <p>Checking for vulnerabilities in ${language} code...</p>
- <div style="margin-top: 30px;">
- <div style="width: 100%; height: 4px; background: #333; border-radius: 2px; overflow: hidden;">
- <div style="width: 60%; height: 100%; background: #967bb6; animation: loading 2s infinite;"></div>
- </div>
- </div>
- </div>
- `;
+  // Show loading state
+  resultsContent.innerHTML = `
+    <div class="welcome-message">
+      <h3>Analyzing Code...</h3>
+      <p>Checking for vulnerabilities in ${language} code...</p>
+      <div style="margin-top: 30px;">
+        <div style="width: 100%; height: 4px; background: #333; border-radius: 2px; overflow: hidden;">
+          <div style="width: 60%; height: 100%; background: #967bb6; animation: loading 2s infinite;"></div>
+        </div>
+      </div>
+    </div>
+  `;
 
- // Add CSS for loading animation
- const style = document.createElement('style');
- style.textContent = `
- @keyframes loading {
- 0% { transform: translateX(-100%); }
- 100% { transform: translateX(400%); }
- }
- `;
- document.head.appendChild(style);
+  // Add CSS for loading animation
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes loading {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(400%); }
+    }
+  `;
+  document.head.appendChild(style);
 
- try {
- // Call backend API for code analysis
- const res = await fetch("http://127.0.0.1:5000/analyze_code", {
- method: "POST",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({
- code: code,
- language: language
- })
- });
+  try {
+    // Call backend API for code analysis
+    const res = await fetch("http://127.0.0.1:5000/analyze_code", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        code: code,
+        language: language
+      })
+    });
 
- if (!res.ok) {
- throw new Error(`HTTP error! status: ${res.status}`);
- }
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
 
- const data = await res.json();
- displayCodeAnalysisResults(data);
+    const data = await res.json();
+    displayCodeAnalysisResults(data);
 
- } catch (err) {
- console.error("Code analysis error:", err);
- resultsContent.innerHTML = `
- <div class="vulnerability-report">
- <div class="vuln-header">Analysis Error</div>
- <div style="text-align: center; padding: 20px; color: #ff9966;">
- Error analyzing code: ${err.message}
- <br><br>
- Please check if the backend server is running on port 5000.
- </div>
- </div>
- `;
- }
+  } catch (err) {
+    console.error("Code analysis error:", err);
+    resultsContent.innerHTML = `
+      <div class="vulnerability-report">
+        <div class="vuln-header">Analysis Error</div>
+        <div style="text-align: center; padding: 20px; color: #ff9966;">
+          Error analyzing code: ${err.message}
+          <br><br>
+          Please check if the backend server is running on port 5000.
+        </div>
+      </div>
+    `;
+  }
 }
 
 function displayCodeAnalysisResults(data) {
- if (!data.vulnerabilities || data.vulnerabilities.length === 0) {
- resultsContent.innerHTML = `
- <div class="vulnerability-report">
- <div class="no-vuln">No Vulnerabilities Found!</div>
- <div style="text-align: center; padding: 20px; color: #99ff99;">
- Your code appears to be secure against common input-related vulnerabilities.
- <br><br>
- <small style="color: #bbb;">Note: This is a basic analysis. Always follow security best practices.</small>
- </div>
- </div>
- `;
- return;
- }
+  if (!data.vulnerabilities || data.vulnerabilities.length === 0) {
+    resultsContent.innerHTML = `
+      <div class="vulnerability-report">
+        <div class="no-vuln">No Vulnerabilities Found!</div>
+        <div style="text-align: center; padding: 20px; color: #99ff99;">
+          Your code appears to be secure against common input-related vulnerabilities.
+          <br><br>
+          <small style="color: #bbb;">Note: This is a basic analysis. Always follow security best practices.</small>
+        </div>
+      </div>
+    `;
+    return;
+  }
 
- let html = `
- <div class="vulnerability-report">
- <div class="vuln-header">Your code is vulnerable! The following mistakes were found:</div>
- `;
+  let html = `
+    <div class="vulnerability-report">
+      <div class="vuln-header">Your code is vulnerable! The following mistakes were found:</div>
+  `;
 
- data.vulnerabilities.forEach(vuln => {
- html += `
- <div class="vuln-item">
- <div class="vuln-line">
- <span class="line-number">Line ${vuln.line}</span>
- use of "${vuln.mistake}"
- </div>
- <div class="vuln-mistake">
- the use of "${vuln.mistake}" makes your program open to "${vuln.explanation}"
- </div>
- <div class="vuln-solution">
- replace with "${vuln.solution}" to prevent this risk
- </div>
- <div class="solution-code">
- ${vuln.example || vuln.solution}
- </div>
- </div>
- `;
- });
+  data.vulnerabilities.forEach(vuln => {
+    html += `
+      <div class="vuln-item">
+        <div class="vuln-line">
+          <span class="line-number">Line ${vuln.line}</span>
+          use of "${vuln.mistake}"
+        </div>
+        <div class="vuln-mistake">
+          the use of "${vuln.mistake}" makes your program open to "${vuln.explanation}"
+        </div>
+        <div class="vuln-solution">
+          replace with "${vuln.solution}" to prevent this risk
+        </div>
+        <div class="solution-code">
+          ${vuln.example || vuln.solution}
+        </div>
+      </div>
+    `;
+  });
 
- html += `
- <div style="margin-top: 30px; padding: 15px; background: #1a1a1a; border-radius: 6px; border-left: 4px solid #967bb6; color: #bbb;">
- <strong>Total Vulnerabilities Found:</strong> ${data.vulnerabilities.length}<br>
- <strong>Language:</strong> ${data.language || 'Unknown'}<br>
- <strong>Recommendation:</strong> Fix all vulnerabilities before deploying your code
- </div>
- </div>
- `;
+  html += `
+    <div style="margin-top: 30px; padding: 15px; background: #1a1a1a; border-radius: 6px; border-left: 4px solid #967bb6; color: #bbb;">
+      <strong>Total Vulnerabilities Found:</strong> ${data.vulnerabilities.length}<br>
+      <strong>Language:</strong> ${data.language || 'Unknown'}<br>
+      <strong>Recommendation:</strong> Fix all vulnerabilities before deploying your code
+    </div>
+  </div>
+  `;
 
- resultsContent.innerHTML = html;
+  resultsContent.innerHTML = html;
 }
 
 /* ---------- CHAT FUNCTIONS ---------- */
 function showChat(payload, vulnerabilityType, labType, sessionId) {
- chatSessionId = sessionId;
- chatPayload = payload;
- chatVulnerabilityType = vulnerabilityType;
- chatLabType = labType;
+  chatSessionId = sessionId;
+  chatPayload = payload;
+  chatVulnerabilityType = vulnerabilityType;
+  chatLabType = labType;
 
- // Show chat icon only (no notification bubble)
- chatIcon.classList.add("show");
+  // Show chat icon only (no notification bubble)
+  chatIcon.classList.add("show");
 
- // Reset chat state
- chatHasInteracted = false;
- clearChatMessages();
- addBotMessage("Hi, I'm NULLBOT. I can help you understand this input.");
- presetOptions.style.display = "flex";
+  // Reset chat state
+  chatHasInteracted = false;
+  clearChatMessages();
+  addBotMessage("Hi, I'm NULLBOT. I can help you understand this input.");
+  presetOptions.style.display = "flex";
 }
 
 function openChat() {
- chatBox.classList.add("open");
- notificationBubble.classList.remove("show");
- chatInput.focus();
+  chatBox.classList.add("open");
+  notificationBubble.classList.remove("show");
+  chatInput.focus();
 }
 
 function closeChat() {
- chatBox.classList.remove("open");
+  chatBox.classList.remove("open");
 }
 
 function clearChatMessages() {
- chatMessages.innerHTML = "";
+  chatMessages.innerHTML = "";
 }
 
 function addUserMessage(message) {
- const div = document.createElement("div");
- div.className = "message user";
- div.textContent = message;
- chatMessages.appendChild(div);
- chatMessages.scrollTop = chatMessages.scrollHeight;
+  const div = document.createElement("div");
+  div.className = "message user";
+  div.textContent = message;
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 function createTypingIndicator() {
- console.log("TYPING: Creating typing indicator");
- if (!chatMessages) {
- console.error("ERROR: chatMessages not found");
- return null;
- }
+  console.log("TYPING: Creating typing indicator");
+  if (!chatMessages) {
+    console.error("ERROR: chatMessages not found");
+    return null;
+  }
 
- const typingDiv = document.createElement("div");
- typingDiv.className = "typing-indicator";
- typingDiv.id = "typingIndicator";
+  const typingDiv = document.createElement("div");
+  typingDiv.className = "typing-indicator";
+  typingDiv.id = "typingIndicator";
 
- const textDiv = document.createElement("div");
- textDiv.className = "typing-text";
- textDiv.textContent = "NULLBOT is typing";
+  const textDiv = document.createElement("div");
+  textDiv.className = "typing-text";
+  textDiv.textContent = "NULLBOT is typing";
 
- const dotsDiv = document.createElement("div");
- dotsDiv.className = "typing-dots";
+  const dotsDiv = document.createElement("div");
+  dotsDiv.className = "typing-dots";
 
- for (let i = 0; i < 3; i++) {
- const span = document.createElement("span");
- dotsDiv.appendChild(span);
- }
+  for (let i = 0; i < 3; i++) {
+    const span = document.createElement("span");
+    dotsDiv.appendChild(span);
+  }
 
- typingDiv.appendChild(textDiv);
- typingDiv.appendChild(dotsDiv);
- chatMessages.appendChild(typingDiv);
- chatMessages.scrollTop = chatMessages.scrollHeight;
+  typingDiv.appendChild(textDiv);
+  typingDiv.appendChild(dotsDiv);
+  chatMessages.appendChild(typingDiv);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 
- console.log("TYPING: Typing indicator created");
- return typingDiv;
+  console.log("TYPING: Typing indicator created");
+  return typingDiv;
 }
 
 function removeTypingIndicator() {
- console.log("TYPING: Removing typing indicator");
- const typingDiv = document.getElementById("typingIndicator");
- if (typingDiv) {
- typingDiv.remove();
- console.log("TYPING: Typing indicator removed");
- } else {
- console.log("TYPING: No typing indicator to remove");
- }
+  console.log("TYPING: Removing typing indicator");
+  const typingDiv = document.getElementById("typingIndicator");
+  if (typingDiv) {
+    typingDiv.remove();
+    console.log("TYPING: Typing indicator removed");
+  } else {
+    console.log("TYPING: No typing indicator to remove");
+  }
 }
 
 function addBotMessage(message) {
- console.log("RENDERING: addBotMessage() called with:", message ? (message.substring(0, 50) + "...") : "<EMPTY MESSAGE>");
- const div = document.createElement("div");
- div.className = "message bot";
- div.textContent = message; // Set full message immediately
- chatMessages.appendChild(div);
+  console.log("RENDERING: addBotMessage() called with:", message ? (message.substring(0, 50) + "...") : "<EMPTY MESSAGE>");
+  const div = document.createElement("div");
+  div.className = "message bot";
+  div.textContent = message; // Set full message immediately
+  chatMessages.appendChild(div);
 
- console.log("RENDERING: Message div created and appended to chatMessages");
- console.log("RENDERING: chatMessages.innerHTML now contains", chatMessages.children.length, "elements");
+  console.log("RENDERING: Message div created and appended to chatMessages");
+  console.log("RENDERING: chatMessages.innerHTML now contains", chatMessages.children.length, "elements");
 
- // Smooth scroll to bottom
- chatMessages.scrollTop = chatMessages.scrollHeight;
- console.log("RENDERING: Scrolled to bottom");
+  // Smooth scroll to bottom
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  console.log("RENDERING: Scrolled to bottom");
 
- return div;
+  return div;
 }
 
 function selectPreset(message) {
- chatInput.value = message;
- sendChatMessage();
+  chatInput.value = message;
+  sendChatMessage();
 }
 
 async function sendChatMessage() {
- console.log("=== FRONTEND: sendChatMessage() STARTED ===");
- const message = chatInput.value.trim();
- console.log("Message to send:", message);
- console.log("session_id:", chatSessionId);
- console.log("payload:", chatPayload);
- console.log("vulnerability_type:", chatVulnerabilityType);
- console.log("lab_type:", chatLabType);
+  console.log("=== FRONTEND: sendChatMessage() STARTED ===");
+  const message = chatInput.value.trim();
+  console.log("Message to send:", message);
+  console.log("session_id:", chatSessionId);
+  console.log("payload:", chatPayload);
+  console.log("vulnerability_type:", chatVulnerabilityType);
+  console.log("lab_type:", chatLabType);
 
- if (!message || !chatSessionId) {
- console.log("ERROR: Missing message or session_id. Aborting.");
- return;
- }
+  if (!message || !chatSessionId) {
+    console.log("ERROR: Missing message or session_id. Aborting.");
+    return;
+  }
 
- // Disable input while waiting
- chatInput.disabled = true;
+  // Disable input while waiting
+  chatInput.disabled = true;
 
- // Add user message
- console.log("Adding user message to UI...");
- addUserMessage(message);
- chatInput.value = "";
+  // Add user message
+  console.log("Adding user message to UI...");
+  addUserMessage(message);
+  chatInput.value = "";
 
- // Hide presets after first interaction
- if (!chatHasInteracted) {
- presetOptions.style.display = "none";
- chatHasInteracted = true;
- }
+  // Hide presets after first interaction
+  if (!chatHasInteracted) {
+    presetOptions.style.display = "none";
+    chatHasInteracted = true;
+  }
 
- // Show typing indicator - Dynamically create it
- console.log("Creating typing indicator...");
- createTypingIndicator();
+  // Show typing indicator - Dynamically create it
+  console.log("Creating typing indicator...");
+  createTypingIndicator();
 
- try {
- console.log("Making API call to /chat...");
- const res = await fetch("http://127.0.0.1:5000/chat", {
- method: "POST",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({
- session_id: chatSessionId,
- message: message,
- payload: chatPayload,
- vulnerability_type: chatVulnerabilityType,
- lab_type: chatLabType
- })
- });
+  try {
+    console.log("Making API call to /chat...");
+    const res = await fetch("http://127.0.0.1:5000/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        session_id: chatSessionId,
+        message: message,
+        payload: chatPayload,
+        vulnerability_type: chatVulnerabilityType,
+        lab_type: chatLabType
+      })
+    });
 
- console.log("API response received. Status:", res.status, res.ok ? "OK" : "ERROR");
+    console.log("API response received. Status:", res.status, res.ok ? "OK" : "ERROR");
 
- if (!res.ok) {
- throw new Error(`HTTP error! status: ${res.status}`);
- }
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
 
- const data = await res.json();
- console.log("API JSON data received:", data);
+    const data = await res.json();
+    console.log("API JSON data received:", data);
 
- // Remove typing indicator
- console.log("Removing typing indicator...");
- removeTypingIndicator();
+    // Remove typing indicator
+    console.log("Removing typing indicator...");
+    removeTypingIndicator();
 
- // Show bot message
- console.log("Rendering bot message...");
- addBotMessage(data.response);
+    // Show bot message
+    console.log("Rendering bot message...");
+    addBotMessage(data.response);
 
- } catch (err) {
- console.error("Chat error:", err);
- hideTypingIndicator();
- addBotMessage("Sorry, I couldn't process your message. Please try again.");
- }
+  } catch (err) {
+    console.error("Chat error:", err);
+    hideTypingIndicator();
+    addBotMessage("Sorry, I couldn't process your message. Please try again.");
+  }
 
- console.log("Re-enabling chat input...");
- chatInput.disabled = false;
- console.log("=== FRONTEND: sendChatMessage() COMPLETE ===");
+  console.log("Re-enabling chat input...");
+  chatInput.disabled = false;
+  console.log("=== FRONTEND: sendChatMessage() COMPLETE ===");
 }
 
 // Handle Enter key in chat input
 chatInput.addEventListener("keydown", e => {
- if (e.key === "Enter" && !e.shiftKey) {
- e.preventDefault();
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
 
- // Clear any existing typing if user sends new message
- if (currentTypingInterval) {
- clearInterval(currentTypingInterval);
- currentTypingInterval = null;
- removeTypingIndicator();
- }
+    // Clear any existing typing if user sends new message
+    if (currentTypingInterval) {
+      clearInterval(currentTypingInterval);
+      currentTypingInterval = null;
+      removeTypingIndicator();
+    }
 
- sendChatMessage();
- }
+    sendChatMessage();
+  }
 });
 
 /* ---------- LOGIN LAB ---------- */
 // ========== E-COMMERCE SQLI LAB STATE MANAGEMENT ==========
 
 let loginLabState = {
- loggedInUser: null,
- currentPage: 'login', // 'login', 'dashboard', 'products', 'orders', 'account'
- lastQuery: ''
+  loggedInUser: null,
+  currentPage: 'login', // 'login', 'dashboard', 'products', 'orders', 'account'
+  lastQuery: ''
 };
 
 // ========== LOGIN PAGE ==========
 
 async function initLoginDatabase() {
- try {
- const response = await fetch(`http://127.0.0.1:5000/api/login/init`);
- const data = await response.json();
- return data.status === 'initialized';
- } catch (error) {
- console.error('Failed to initialize login database:', error);
- return false;
- }
+  try {
+    const response = await fetch(`http://127.0.0.1:5000/api/login/init`);
+    const data = await response.json();
+    return data.status === 'initialized';
+  } catch (error) {
+    console.error('Failed to initialize login database:', error);
+    return false;
+  }
 }
 
 function loadLoginLab() {
- setActiveTab("login-tab");
- leftPanel.className = "left-panel login-theme";
- loginLabState.currentPage = 'login';
- loginLabState.loggedInUser = null;
+  setActiveTab("login-tab");
+  leftPanel.className = "left-panel login-theme";
+  loginLabState.currentPage = 'login';
+  loginLabState.loggedInUser = null;
 
- // Initialize database on load
- initLoginDatabase().then(() => {
- console.log('Login database initialized');
- });
+  // Initialize database on load
+  initLoginDatabase().then(() => {
+    console.log('Login database initialized');
+  });
 
- labArea.innerHTML = `
- <h2>E-Commerce Login Lab</h2>
- <div class="login-container">
- <div class="form-group">
- <label for="loginUsername">Username:</label>
- <input type="text" id="loginUsername" placeholder="Enter username" autocomplete="off">
- </div>
- <div class="form-group">
- <label for="loginPassword">Password:</label>
- <input type="password" id="loginPassword" placeholder="Enter password" autocomplete="off">
- </div>
- <div class="button-group">
- <button onclick="submitLogin()" class="btn-primary">Login</button>
- <button onclick="showRegisterForm()" class="btn-secondary">Register</button>
- </div>
- <div id="loginResult" class="result-box" style="display: none; margin-top: 20px;"></div>
- </div>
- `;
+  labArea.innerHTML = `
+    <h2>E-Commerce Login Lab</h2>
+    <div class="login-container">
+      <div class="form-group">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" placeholder="Enter username" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" placeholder="Enter password" autocomplete="off">
+      </div>
+      <div class="button-group">
+        <button onclick="submitLogin()" class="btn-primary">Login</button>
+        <button onclick="showRegisterForm()" class="btn-secondary">Register</button>
+      </div>
+      <div id="loginResult" class="result-box" style="display: none; margin-top: 20px;"></div>
+    </div>
+  `;
 
- explanation.innerHTML = `
- <h3>E-Commerce SQLi Lab - Instructions</h3>
- <p>Test SQL injection vulnerabilities in an e-commerce application context.</p>
- <h4>Default Credentials:</h4>
- <ul>
- <li>Username: <code>admin</code>, Password: <code>admin123</code></li>
- <li>Username: <code>user</code>, Password: <code>pass123</code></li>
- </ul>
- <h4>Tasks:</h4>
- <ol>
- <li>Try logging in with different credentials</li>
- <li>Register new users</li>
- </ol>
- `;
+  explanation.innerHTML = `
+    <h3>E-Commerce SQLi Lab - Instructions</h3>
+    <p>Test SQL injection vulnerabilities in an e-commerce application context.</p>
+    <h4>Default Credentials:</h4>
+    <ul>
+      <li>Username: <code>admin</code>, Password: <code>admin123</code></li>
+      <li>Username: <code>user</code>, Password: <code>pass123</code></li>
+    </ul>
+    <h4>Tasks:</h4>
+    <ol>
+      <li>Try logging in with different credentials</li>
+      <li>Register new users</li>
+    </ol>
+  `;
 
- // Set the initial login query template
- const currentQuery = document.getElementById('currentQuery');
- if (currentQuery) {
- currentQuery.textContent = "SELECT * FROM users WHERE username = '' AND password = ''";
- }
+  // Set the initial login query template
+  const currentQuery = document.getElementById('currentQuery');
+  if (currentQuery) {
+    currentQuery.textContent = "SELECT * FROM users WHERE username = '' AND password = ''";
+  }
 }
 
 async function submitLogin() {
- const username = document.getElementById('loginUsername').value;
- const password = document.getElementById('loginPassword').value;
+  const username = document.getElementById('loginUsername').value;
+  const password = document.getElementById('loginPassword').value;
 
- if (!username || !password) {
- showLoginResult('Please enter both username and password', 'error');
- return;
- }
+  if (!username || !password) {
+    showLoginResult('Please enter both username and password', 'error');
+    return;
+  }
 
- // Send to ML model (combined username + password)
- const combinedInput = `${username}:${password}`;
- await analyzePayload(combinedInput);
+  // Send to ML model (combined username + password)
+  const combinedInput = `${username}:${password}`;
+  await analyzePayload(combinedInput);
 
- // Send login request
- try {
- const response = await fetch(`http://127.0.0.1:5000/api/login`, {
- method: 'POST',
- headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ username, password })
- });
+  // Send login request
+  try {
+    const response = await fetch(`http://127.0.0.1:5000/api/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
 
- const data = await response.json();
+    const data = await response.json();
 
- if (data.query) {
- showCurrentQuery(data.query);
- loginLabState.lastQuery = data.query;
- }
+    if (data.query) {
+      showCurrentQuery(data.query);
+      loginLabState.lastQuery = data.query;
+    }
 
- if (data.success) {
- loginLabState.loggedInUser = data.username;
- showLoginResult(`Login successful! Welcome, ${data.username}`, 'success');
- setTimeout(() => {
- loadDashboard();
- }, 1000);
- } else {
- showLoginResult('Login failed. Invalid username or password.', 'error');
- }
- } catch (error) {
- showLoginResult('Login error: ' + error.message, 'error');
- }
+    if (data.success) {
+      loginLabState.loggedInUser = data.username;
+      showLoginResult(`Login successful! Welcome, ${data.username}`, 'success');
+      setTimeout(() => {
+        loadDashboard();
+      }, 1000);
+    } else {
+      showLoginResult('Login failed. Invalid username or password.', 'error');
+    }
+  } catch (error) {
+    showLoginResult('Login error: ' + error.message, 'error');
+  }
 }
 
 function showLoginResult(message, type) {
- const resultBox = document.getElementById('loginResult');
- resultBox.style.display = 'block';
- resultBox.className = `result-box ${type}`;
- resultBox.textContent = message;
+  const resultBox = document.getElementById('loginResult');
+  resultBox.style.display = 'block';
+  resultBox.className = `result-box ${type}`;
+  resultBox.textContent = message;
 }
 
 function showCurrentQuery(query) {
- const queryDisplay = document.getElementById('queryDisplay');
- const currentQuery = document.getElementById('currentQuery');
-    if (!queryDisplay || !currentQuery) {
-        console.error("Query display elements not found");
-        return;
-    }
- currentQuery.textContent = query;
- loginLabState.lastQuery = query;
+  const queryDisplay = document.getElementById('queryDisplay');
+  const currentQuery = document.getElementById('currentQuery');
+  if (!queryDisplay || !currentQuery) {
+    console.error("Query display elements not found");
+    return;
+  }
+  currentQuery.textContent = query;
+  loginLabState.lastQuery = query;
 }
 
 // ========== REGISTRATION ==========
 
 function showRegisterForm() {
- labArea.innerHTML = `
- <h2>Register New User</h2>
- <div class="register-container">
- <div class="form-group">
- <label for="regUsername">Username:</label>
- <input type="text" id="regUsername" placeholder="Choose a username" autocomplete="off">
- </div>
- <div class="form-group">
- <label for="regPassword">Password:</label>
- <input type="password" id="regPassword" placeholder="Choose a password" autocomplete="off">
- </div>
- <div class="form-group">
- <label for="regConfirmPassword">Confirm Password:</label>
- <input type="password" id="regConfirmPassword" placeholder="Confirm password" autocomplete="off">
- </div>
- <div class="button-group">
- <button onclick="submitRegistration()" class="btn-primary">Register</button>
- <button onclick="loadLoginLab()" class="btn-secondary">Back to Login</button>
- </div>
- <div id="registerResult" class="result-box" style="display: none; margin-top: 20px;"></div>
- </div>
- `;
+  labArea.innerHTML = `
+    <h2>Register New User</h2>
+    <div class="register-container">
+      <div class="form-group">
+        <label for="regUsername">Username:</label>
+        <input type="text" id="regUsername" placeholder="Choose a username" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="regPassword">Password:</label>
+        <input type="password" id="regPassword" placeholder="Choose a password" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="regConfirmPassword">Confirm Password:</label>
+        <input type="password" id="regConfirmPassword" placeholder="Confirm password" autocomplete="off">
+      </div>
+      <div class="button-group">
+        <button onclick="submitRegistration()" class="btn-primary">Register</button>
+        <button onclick="loadLoginLab()" class="btn-secondary">Back to Login</button>
+      </div>
+      <div id="registerResult" class="result-box" style="display: none; margin-top: 20px;"></div>
+    </div>
+  `;
 }
 
 async function submitRegistration() {
- const username = document.getElementById('regUsername').value;
- const password = document.getElementById('regPassword').value;
- const confirmPassword = document.getElementById('regConfirmPassword').value;
+  const username = document.getElementById('regUsername').value;
+  const password = document.getElementById('regPassword').value;
+  const confirmPassword = document.getElementById('regConfirmPassword').value;
 
- const resultBox = document.getElementById('registerResult');
+  const resultBox = document.getElementById('registerResult');
 
- if (!username || !password) {
- showRegisterResult('Please fill in all fields', 'error');
- return;
- }
+  if (!username || !password) {
+    showRegisterResult('Please fill in all fields', 'error');
+    return;
+  }
 
- if (password !== confirmPassword) {
- showRegisterResult('Passwords do not match', 'error');
- return;
- }
+  if (password !== confirmPassword) {
+    showRegisterResult('Passwords do not match', 'error');
+    return;
+  }
 
- // Send to ML model
- const combinedInput = `${username}:${password}`;
- await analyzePayload(combinedInput);
+  // Send to ML model
+  const combinedInput = `${username}:${password}`;
+  await analyzePayload(combinedInput);
 
- try {
- const response = await fetch(`http://127.0.0.1:5000/api/register`, {
- method: 'POST',
- headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ username, password })
- });
+  try {
+    const response = await fetch(`http://127.0.0.1:5000/api/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
 
- const data = await response.json();
+    const data = await response.json();
 
- if (response.ok) {
- showRegisterResult('Registration successful! You can now login.', 'success');
- setTimeout(() => {
- loadLoginLab();
- }, 1500);
- } else {
- showRegisterResult('Registration failed: ' + data.error, 'error');
- }
- } catch (error) {
- showRegisterResult('Registration error: ' + error.message, 'error');
- }
+    if (response.ok) {
+      showRegisterResult('Registration successful! You can now login.', 'success');
+      setTimeout(() => {
+        loadLoginLab();
+      }, 1500);
+    } else {
+      showRegisterResult('Registration failed: ' + data.error, 'error');
+    }
+  } catch (error) {
+    showRegisterResult('Registration error: ' + error.message, 'error');
+  }
 }
 
 function showRegisterResult(message, type) {
- const resultBox = document.getElementById('registerResult');
- resultBox.style.display = 'block';
- resultBox.className = `result-box ${type}`;
- resultBox.textContent = message;
+  const resultBox = document.getElementById('registerResult');
+  resultBox.style.display = 'block';
+  resultBox.className = `result-box ${type}`;
+  resultBox.textContent = message;
 }
 
 // ========== DASHBOARD ==========
 
 async function loadDashboard() {
- loginLabState.currentPage = 'dashboard';
- leftPanel.className = "left-panel login-theme";
+  loginLabState.currentPage = 'dashboard';
+  leftPanel.className = "left-panel login-theme";
 
- try {
- const response = await fetch(
- `http://127.0.0.1:5000/api/dashboard?username=${loginLabState.loggedInUser}`
- );
- const data = await response.json();
+  try {
+    const response = await fetch(
+      `http://127.0.0.1:5000/api/dashboard?username=${loginLabState.loggedInUser}`
+    );
+    const data = await response.json();
 
- labArea.innerHTML = `
- <div class="dashboard-container">
- <div class="welcome-message">
- <h2>${data.welcome_message}</h2>
- </div>
- <div class="dashboard-menu">
- <h3>Navigate to:</h3>
- <div class="menu-grid">
- <div class="menu-item" onclick="loadProductsPage()">
- <h4>View Products</h4>
- <p>Browse our product catalog</p>
- </div>
- <div class="menu-item" onclick="loadOrdersPage()">
- <h4>View Orders</h4>
- <p>Check your order history</p>
- </div>
- <div class="menu-item" onclick="loadAccountPage()">
- <h4>Account Details</h4>
- <p>View your account information</p>
- </div>
- </div>
- </div>
- <button onclick="logout()" class="btn-secondary" style="margin-top: 20px;">Logout</button>
- </div>
- `;
+    labArea.innerHTML = `
+      <div class="dashboard-container">
+        <div class="welcome-message">
+          <h2>${data.welcome_message}</h2>
+        </div>
+        <div class="dashboard-menu">
+          <h3>Navigate to:</h3>
+          <div class="menu-grid">
+            <div class="menu-item" onclick="loadProductsPage()">
+              <h4>View Products</h4>
+              <p>Browse our product catalog</p>
+            </div>
+            <div class="menu-item" onclick="loadOrdersPage()">
+              <h4>View Orders</h4>
+              <p>Check your order history</p>
+            </div>
+            <div class="menu-item" onclick="loadAccountPage()">
+              <h4>Account Details</h4>
+              <p>View your account information</p>
+            </div>
+          </div>
+        </div>
+        <button onclick="logout()" class="btn-secondary" style="margin-top: 20px;">Logout</button>
+      </div>
+    `;
 
-const dashboardHTML = `
- <h3>Dashboard</h3>
- <p>Welcome to your e-commerce dashboard!</p>
- <h4>Available Actions:</h4>
- <ul>
- <li><strong>View Products:</strong> Browse and search products</li>
- <li><strong>View Orders:</strong> See your order history</li>
- <li><strong>Account Details:</strong> View account info</li>
- </ul>
- `;
+    const dashboardHTML = `
+      <h3>Dashboard</h3>
+      <p>Welcome to your e-commerce dashboard!</p>
+      <h4>Available Actions:</h4>
+      <ul>
+        <li><strong>View Products:</strong> Browse and search products</li>
+        <li><strong>View Orders:</strong> See your order history</li>
+        <li><strong>Account Details:</strong> View account info</li>
+      </ul>
+    `;
 
- // Set the dashboard query display
-const mlResultSection = (lastMlResult ? '<div style="margin-bottom: 20px; padding: 15px; background-color: var(--background-tertiary); border-radius: 8px; border: 1px solid var(--background-accent);">' + lastMlResult + '</div>' : '');
-explanation.innerHTML = mlResultSection + dashboardHTML;
- const currentQuery = document.getElementById('currentQuery');
- if (currentQuery) {
- currentQuery.textContent = loginLabState.lastQuery || "SELECT * FROM users WHERE username = '" + loginLabState.loggedInUser + "'";
- }
+    // Set the dashboard query display
+    const mlResultSection = (lastMlResult ? '<div style="margin-bottom: 20px; padding: 15px; background-color: var(--background-tertiary); border-radius: 8px; border: 1px solid var(--background-accent);">' + lastMlResult + '</div>' : '');
+    explanation.innerHTML = mlResultSection + dashboardHTML;
+    const currentQuery = document.getElementById('currentQuery');
+    if (currentQuery) {
+      currentQuery.textContent = loginLabState.lastQuery || "SELECT * FROM users WHERE username = '" + loginLabState.loggedInUser + "'";
+    }
 
- } catch (error) {
- console.error('Dashboard load error:', error);
- }
+  } catch (error) {
+    console.error('Dashboard load error:', error);
+  }
 }
 
 function logout() {
- loginLabState.loggedInUser = null;
- loginLabState.currentPage = 'login';
- loadLoginLab();
+  loginLabState.loggedInUser = null;
+  loginLabState.currentPage = 'login';
+  loadLoginLab();
 }
 
 // ========== PRODUCTS PAGE ==========
 
 async function loadProductsPage() {
- loginLabState.currentPage = 'products';
- leftPanel.className = "left-panel login-theme";
+  loginLabState.currentPage = 'products';
+  leftPanel.className = "left-panel login-theme";
 
- // Initialize products database
- await fetch(`http://127.0.0.1:5000/api/products/init`);
+  // Initialize products database
+  await fetch(`http://127.0.0.1:5000/api/products/init`);
 
- // Load products
- loadProducts();
+  // Load products
+  loadProducts();
 
- explanation.innerHTML = `
- <h3>Products Page</h3>
- <p>Browse and search for products.</p>
- `;
+  explanation.innerHTML = `
+    <h3>Products Page</h3>
+    <p>Browse and search for products.</p>
+  `;
 
- // Set the initial products query template
- const currentQuery = document.getElementById('currentQuery');
- if (currentQuery) {
- currentQuery.textContent = "SELECT * FROM products WHERE name LIKE '%search_term%'";
- }
+  // Set the initial products query template
+  const currentQuery = document.getElementById('currentQuery');
+  if (currentQuery) {
+    currentQuery.textContent = "SELECT * FROM products WHERE name LIKE '%search_term%'";
+  }
 }
 
 async function loadProducts(searchTerm = '') {
- try {
- const url = searchTerm
- ? `http://127.0.0.1:5000/api/products?search=${encodeURIComponent(searchTerm)}`
- : `http://127.0.0.1:5000/api/products`;
+  try {
+    const url = searchTerm
+      ? `http://127.0.0.1:5000/api/products?search=${encodeURIComponent(searchTerm)}`
+      : `http://127.0.0.1:5000/api/products`;
 
- const response = await fetch(url);
- const data = await response.json();
+    const response = await fetch(url);
+    const data = await response.json();
 
- // Send search term to ML model
- if (searchTerm) {
- await analyzePayload(searchTerm);
- }
+    // Send search term to ML model
+    if (searchTerm) {
+      await analyzePayload(searchTerm);
+    }
 
- let productsHtml = `
- <div class="products-container">
- <h2>Product Catalog</h2>
- <div class="search-box">
- <input type="text" id="productSearch" placeholder="Search products..." value="${searchTerm}">
- <button onclick="searchProducts()" class="btn-primary">Search</button>
- </div>
- <div class="product-list">
- <table class="products-table">
- <thead>
- <tr>
- <th>ID</th>
- <th>Product Name</th>
- <th>Price</th>
- </tr>
- </thead>
- <tbody>
- `;
+    let productsHtml = `
+      <div class="products-container">
+        <h2>Product Catalog</h2>
+        <div class="search-box">
+          <input type="text" id="productSearch" placeholder="Search products..." value="${searchTerm}">
+          <button onclick="searchProducts()" class="btn-primary">Search</button>
+        </div>
+        <div class="product-list">
+          <table class="products-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+    `;
 
- if (data.products && data.products.length > 0) {
- data.products.forEach(product => {
- productsHtml += `
- <tr>
- <td>${product.id}</td>
- <td>${product.name}</td>
- <td>$${product.price}</td>
- </tr>
- `;
- });
- } else {
- productsHtml += '<tr><td colspan="3" style="text-align: center; padding: 20px;">No products found</td></tr>';
- }
+    if (data.products && data.products.length > 0) {
+      data.products.forEach(product => {
+        productsHtml += `
+          <tr>
+            <td>${product.id}</td>
+            <td>${product.name}</td>
+            <td>$${product.price}</td>
+          </tr>
+        `;
+      });
+    } else {
+      productsHtml += '<tr><td colspan="3" style="text-align: center; padding: 20px;">No products found</td></tr>';
+    }
 
- productsHtml += `
- </tbody>
- </table>
- </div>
- <button onclick="loadDashboard()" class="btn-secondary" style="margin-top: 20px;">Back to Dashboard</button>
- </div>
- `;
+    productsHtml += `
+            </tbody>
+          </table>
+        </div>
+        <button onclick="loadDashboard()" class="btn-secondary" style="margin-top: 20px;">Back to Dashboard</button>
+      </div>
+    `;
 
- labArea.innerHTML = productsHtml;
+    labArea.innerHTML = productsHtml;
 
- if (data.query) {
- showCurrentQuery(data.query);
- }
+    if (data.query) {
+      showCurrentQuery(data.query);
+    }
 
- } catch (error) {
- console.error('Load products error:', error);
- }
+  } catch (error) {
+    console.error('Load products error:', error);
+  }
 }
 
 async function searchProducts() {
- const searchTerm = document.getElementById('productSearch').value;
- await loadProducts(searchTerm);
+  const searchTerm = document.getElementById('productSearch').value;
+  await loadProducts(searchTerm);
 }
 
 // ========== ORDERS PAGE ==========
 
 async function loadOrdersPage() {
- loginLabState.currentPage = 'orders';
- leftPanel.className = "left-panel login-theme";
+  loginLabState.currentPage = 'orders';
+  leftPanel.className = "left-panel login-theme";
 
- // Initialize orders database
- await fetch(`http://127.0.0.1:5000/api/orders/init`);
+  // Initialize orders database
+  await fetch(`http://127.0.0.1:5000/api/orders/init`);
 
- // Load orders
- loadOrders();
+  // Load orders
+  loadOrders();
 
- explanation.innerHTML = `
- <h3>Orders Page</h3>
- <p>View your order history.</p>
- `;
+  explanation.innerHTML = `
+    <h3>Orders Page</h3>
+    <p>View your order history.</p>
+  `;
 
- // Set the initial orders query template
- const currentQuery1 = document.getElementById('currentQuery');
- if (currentQuery1) {
- currentQuery1.textContent = "SELECT * FROM orders WHERE username = 'username'";
- }
+  // Set the initial orders query template
+  const currentQuery1 = document.getElementById('currentQuery');
+  if (currentQuery1) {
+    currentQuery1.textContent = "SELECT * FROM orders WHERE username = 'username'";
+  }
 }
 
 async function loadOrders(searchTerm = '') {
- try {
- const response = await fetch(
- `http://127.0.0.1:5000/api/orders?username=${loginLabState.loggedInUser}${searchTerm ? '&search=' + encodeURIComponent(searchTerm) : ''}`
- );
- const data = await response.json();
+  try {
+    const response = await fetch(
+      `http://127.0.0.1:5000/api/orders?username=${loginLabState.loggedInUser}${searchTerm ? '&search=' + encodeURIComponent(searchTerm) : ''}`
+    );
+    const data = await response.json();
 
- let ordersHtml = `
- <div class="orders-container">
- <h2>Order History for ${data.username}</h2>
-  <div class="search-box">
-  <input type="text" id="orderSearch" placeholder="Search orders..." value="${searchTerm}">
-  <button onclick="searchOrders()" class="btn-primary">Search</button>
-  </div>
- <div class="order-list">
- <table class="orders-table">
- <thead>
- <tr>
- <th>Order ID</th>
- <th>Username</th>
- <th>Product</th>
- <th>Quantity</th>
- </tr>
- </thead>
- <tbody>
- `;
+    let ordersHtml = `
+      <div class="orders-container">
+        <h2>Order History for ${data.username}</h2>
+        <div class="search-box">
+          <input type="text" id="orderSearch" placeholder="Search orders..." value="${searchTerm}">
+          <button onclick="searchOrders()" class="btn-primary">Search</button>
+        </div>
+        <div class="order-list">
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Username</th>
+                <th>Product</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+    `;
 
- if (data.orders && data.orders.length > 0) {
- data.orders.forEach(order => {
- ordersHtml += `
- <tr>
- <td>${order.id}</td>
- <td>${order.username}</td>
- <td>${order.product}</td>
- <td>${order.amount}</td>
- </tr>
- `;
- });
- } else {
- ordersHtml += '<tr><td colspan="4" style="text-align: center; padding: 20px;">No orders found for this user</td></tr>';
- }
+    if (data.orders && data.orders.length > 0) {
+      data.orders.forEach(order => {
+        ordersHtml += `
+          <tr>
+            <td>${order.id}</td>
+            <td>${order.username}</td>
+            <td>${order.product}</td>
+            <td>${order.amount}</td>
+          </tr>
+        `;
+      });
+    } else {
+      ordersHtml += '<tr><td colspan="4" style="text-align: center; padding: 20px;">No orders found for this user</td></tr>';
+    }
 
- ordersHtml += `
- </tbody>
- </table>
- </div>
- <button onclick="loadDashboard()" class="btn-secondary" style="margin-top: 20px;">Back to Dashboard</button>
- </div>
- `;
+    ordersHtml += `
+            </tbody>
+          </table>
+        </div>
+        <button onclick="loadDashboard()" class="btn-secondary" style="margin-top: 20px;">Back to Dashboard</button>
+      </div>
+    `;
 
- labArea.innerHTML = ordersHtml;
+    labArea.innerHTML = ordersHtml;
 
- if (data.query) {
- showCurrentQuery(data.query);
- }
+    if (data.query) {
+      showCurrentQuery(data.query);
+    }
 
- } catch (error) {
- console.error('Load orders error:', error);
- }
+  } catch (error) {
+    console.error('Load orders error:', error);
+  }
 }
 
 async function searchOrders() {
-    const searchTerm = document.getElementById('orderSearch').value;
+  const searchTerm = document.getElementById('orderSearch').value;
 
-    // Send search input to ML model for classification
-    if (searchTerm) {
-        await analyzePayload(searchTerm);
-    }
+  // Send search input to ML model for classification
+  if (searchTerm) {
+    await analyzePayload(searchTerm);
+  }
 
-    await loadOrders(searchTerm);
+  await loadOrders(searchTerm);
 }
 
 // ========== ACCOUNT PAGE ==========
 
 async function loadAccountPage() {
- loginLabState.currentPage = 'account';
- leftPanel.className = "left-panel login-theme";
+  loginLabState.currentPage = 'account';
+  leftPanel.className = "left-panel login-theme";
 
- // Initialize accounts database
- await fetch(`http://127.0.0.1:5000/api/accounts/init`);
+  // Initialize accounts database
+  await fetch(`http://127.0.0.1:5000/api/accounts/init`);
 
- // Load account details
- loadAccount();
+  // Load account details
+  loadAccount();
 
- explanation.innerHTML = `
- <h3>Account Details Page</h3>
- <p>View your account information and balance.</p>
- `;
+  explanation.innerHTML = `
+    <h3>Account Details Page</h3>
+    <p>View your account information and balance.</p>
+  `;
 
- // Set the initial account query template
- const currentQuery2 = document.getElementById('currentQuery');
- if (currentQuery2) {
- currentQuery2.textContent = "SELECT * FROM accounts WHERE username = 'username'";
- }
+  // Set the initial account query template
+  const currentQuery2 = document.getElementById('currentQuery');
+  if (currentQuery2) {
+    currentQuery2.textContent = "SELECT * FROM accounts WHERE username = 'username'";
+  }
 }
 
 async function loadAccount() {
- try {
- const response = await fetch(
- `http://127.0.0.1:5000/api/accounts?username=${loginLabState.loggedInUser}`
- );
- const data = await response.json();
+  try {
+    const response = await fetch(
+      `http://127.0.0.1:5000/api/accounts?username=${loginLabState.loggedInUser}`
+    );
+    const data = await response.json();
 
- let accountHtml = `
- <div class="account-container">
- <h2>Account Details</h2>
- `;
+    let accountHtml = `
+      <div class="account-container">
+        <h2>Account Details</h2>
+    `;
 
- if (data.account) {
- accountHtml += `
- <div class="account-info">
- <div class="info-row">
- <span class="label">Username:</span>
- <span class="value">${data.account.username}</span>
- </div>
- <div class="info-row">
- <span class="label">Email:</span>
- <span class="value">${data.account.email}</span>
- </div>
- <div class="info-row">
- </span><span class="value">$${data.account.balance.toFixed(2)}</span>
- </div>
- </div>
- `;
- } else {
- accountHtml += '<p>Account not found</p>';
- }
+    if (data.account) {
+      accountHtml += `
+        <div class="account-info">
+          <div class="info-row">
+            <span class="label">Username:</span>
+            <span class="value">${data.account.username}</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Email:</span>
+            <span class="value">${data.account.email}</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Balance:</span>
+            <span class="value">$${data.account.balance.toFixed(2)}</span>
+          </div>
+        </div>
+      `;
+    } else {
+      accountHtml += '<p>Account not found</p>';
+    }
 
- accountHtml += `
- <button onclick="loadDashboard()" class="btn-secondary" style="margin-top: 20px;">Back to Dashboard</button>
- </div>
- `;
+    accountHtml += `
+        <button onclick="loadDashboard()" class="btn-secondary" style="margin-top: 20px;">Back to Dashboard</button>
+      </div>
+    `;
 
- labArea.innerHTML = accountHtml;
+    labArea.innerHTML = accountHtml;
 
- if (data.query) {
- showCurrentQuery(data.query);
- }
+    if (data.query) {
+      showCurrentQuery(data.query);
+    }
 
- } catch (error) {
- console.error('Load account error:', error);
- }
+  } catch (error) {
+    console.error('Load account error:', error);
+  }
 }
 
 /* ---------- COMMENT LAB ---------- */
+let comments = []; // Temporary storage, resets on reload
+let commentLabState = {
+  isLiked: false
+};
+
 function loadCommentLab() {
- setActiveTab("comment-tab");
- leftPanel.className = "left-panel comment-theme";
+  setActiveTab("comment-tab");
+  leftPanel.className = "left-panel comment-theme";
 
- labArea.innerHTML = `
- <h2>Comment Lab</h2>
- <textarea
- id="comment"
- placeholder="Write a comment..."
- ></textarea>
- <button onclick="submitComment()">Post</button>
- `;
+  // Reset comment array on load
+  comments = [];
+  commentLabState.isLiked = false;
 
- explanation.innerHTML = "Welcome to NULLBOX! Here you can safely test payloads and learn about injection attacks. Select a lab and try out some inputs to see explanations here.";
+  labArea.innerHTML = `
+    <div class="instagram-post">
+      <div class="post-header">
+        <div class="profile-icon"></div>
+        <span class="username">user123</span>
+      </div>
+      <div class="post-content">
+        this is a social media post
+      </div>
+      <div class="like-section">
+        <span id="heartIcon" class="heart-icon" onclick="toggleHeart()">♡</span>
+      </div>
+      <div class="comment-input-section">
+        <input type="text" id="commentInput" placeholder="Post a comment" autocomplete="off">
+        <button onclick="submitComment()" class="btn-primary">Submit</button>
+      </div>
+      <div id="commentsDisplay" class="comments-display"></div>
+    </div>
+  `;
 
- document
- .getElementById("comment")
- .addEventListener("keydown", e => {
- if (e.key === "Enter" && e.ctrlKey) {
- submitComment();
- }
- });
+  explanation.innerHTML = "Welcome to NULLBOX! Here you can safely test payloads and learn about injection attacks. Select a lab and try out some inputs to see explanations here.";
+
+  document.getElementById("commentInput").addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      submitComment();
+    }
+  });
+}
+
+function toggleHeart() {
+  commentLabState.isLiked = !commentLabState.isLiked;
+  const heartIcon = document.getElementById("heartIcon");
+  if (commentLabState.isLiked) {
+    heartIcon.innerHTML = "❤️";
+    heartIcon.style.color = "#ff4444";
+  } else {
+    heartIcon.innerHTML = "♡";
+    heartIcon.style.color = "var(--text-normal)";
+  }
+}
+
+function submitComment() {
+  const commentInput = document.getElementById("commentInput");
+  const payload = commentInput.value.trim();
+
+  if (!payload) return;
+
+  // Add to comments array
+  comments.push(payload);
+
+  // Clear input
+  commentInput.value = "";
+
+  // Render all comments using innerHTML (intentionally vulnerable to XSS)
+  renderComments();
+
+  // Send to ML model for analysis
+  analyzePayload(payload);
+}
+
+function renderComments() {
+  const commentsDisplay = document.getElementById("commentsDisplay");
+  let html = "";
+
+  comments.forEach(comment => {
+    // INTENTIONALLY VULNERABLE: Using innerHTML without sanitization
+    html += `<div class="comment">${comment}</div>`;
+  });
+
+  commentsDisplay.innerHTML = html;
 }
 
 /* ---------- PING LAB ---------- */
 function loadPingLab() {
- setActiveTab("ping-tab");
- leftPanel.className = "left-panel ping-theme";
+  setActiveTab("ping-tab");
+  leftPanel.className = "left-panel ping-theme";
 
- labArea.innerHTML = `
- <h2>Ping Lab</h2>
- <input type="text" id="hostname" placeholder="Hostname or IP" autocomplete="off">
- <button onclick="submitPing()">Ping</button>
- `;
+  labArea.innerHTML = `
+    <h2>Ping Lab</h2>
+    <input type="text" id="hostname" placeholder="Hostname or IP" autocomplete="off">
+    <button onclick="submitPing()">Ping</button>
+  `;
 
- explanation.innerHTML = "Welcome to NULLBOX! Here you can safely test payloads and learn about injection attacks. Select a lab and try out some inputs to see explanations here.";
+  explanation.innerHTML = "Welcome to NULLBOX! Here you can safely test payloads and learn about injection attacks. Select a lab and try out some inputs to see explanations here.";
 
- document.getElementById("hostname").addEventListener("keydown", e => {
- if (e.key === "Enter") submitPing();
- });
+  document.getElementById("hostname").addEventListener("keydown", e => {
+    if (e.key === "Enter") submitPing();
+  });
 }
 
 function submitPing() {
- const payload = document.getElementById("hostname").value;
- if (!payload) {
- explanation.innerText = "Enter a hostname to analyze.";
- return;
- }
- analyzePingPayload(payload);
+  const payload = document.getElementById("hostname").value;
+  if (!payload) {
+    explanation.innerText = "Enter a hostname to analyze.";
+    return;
+  }
+  analyzePingPayload(payload);
 }
 
 async function analyzePingPayload(payload) {
- try {
- const lab_type = document.querySelector(".tab.active").textContent.toLowerCase();
- const res = await fetch("http://127.0.0.1:5000/ping_analyze", {
- method: "POST",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({
- hostname: payload,
- lab_type: lab_type
- })
- });
+  try {
+    const lab_type = document.querySelector(".tab.active").textContent.toLowerCase();
+    const res = await fetch("http://127.0.0.1:5000/ping_analyze", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        hostname: payload,
+        lab_type: lab_type
+      })
+    });
 
- if (!res.ok) {
- throw new Error(`HTTP error! status: ${res.status}`);
- }
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
 
- const data = await res.json();
- // Format ML model output
-      const isMalicious = data.is_vulnerable ? "yes" : "no";
-      const formattedOutput = `
-        <div style="font-family: monospace; line-height: 1.6;">
-          <div>malicious: ${isMalicious}</div>
-          <div>type: ${isMalicious === "yes" ? (data.vulnerability_type || "N/A") : "Benign"}</div>
-          <div>confidence: ${data.confidence !== undefined ? data.confidence.toFixed(2) : "N/A"}</div>
-          <hr style="margin: 10px 0; border: none; border-top: 1px solid #ccc;">
-          <div>${data.explanation || "No explanation provided."}</div>
-        </div>
-      `;
-      explanation.innerHTML = formattedOutput;
+    const data = await res.json();
+    // Format ML model output
+    const isMalicious = data.is_vulnerable ? "yes" : "no";
+    const formattedOutput = `
+      <div style="font-family: monospace; line-height: 1.6;">
+        <div>malicious: ${isMalicious}</div>
+        <div>type: ${isMalicious === "yes" ? (data.vulnerability_type || "N/A") : "Benign"}</div>
+        <div>confidence: ${data.confidence !== undefined ? data.confidence.toFixed(2) : "N/A"}</div>
+        <hr style="margin: 10px 0; border: none; border-top: 1px solid #ccc;">
+        <div>${data.explanation || "No explanation provided."}</div>
+      </div>
+    `;
+    explanation.innerHTML = formattedOutput;
 
- // Show chat if vulnerable
- if (data.is_vulnerable) {
- showChat(payload, data.vulnerability_type, lab_type, data.session_id);
- }
+    // Show chat if vulnerable
+    if (data.is_vulnerable) {
+      showChat(payload, data.vulnerability_type, lab_type, data.session_id);
+    }
 
- } catch (err) {
- console.error("Ping analyzer error:", err);
- explanation.innerText = `Analyzer error: ${err.message}`;
- }
-}
-
-function submitComment() {
- const payload = document.getElementById("comment").value;
- analyzePayload(payload);
+  } catch (err) {
+    console.error("Ping analyzer error:", err);
+    explanation.innerText = `Analyzer error: ${err.message}`;
+  }
 }
 
 /* ---------- DEFAULT ---------- */
