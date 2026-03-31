@@ -1376,14 +1376,14 @@ function loadCommentLab() {
 
   labArea.innerHTML = `
     <div class="instagram-post">
-      <div class="post-header">
-        <div class="profile-icon"></div>
-        <span class="username">user123</span>
+      <div class="post-header" style="display: flex; align-items: center; margin-bottom: 12px;">
+        <div class="profile-circle" style="width: 32px; height: 32px; border-radius: 50%; background: var(--brand-experiment); display: inline-block; margin-right: 8px;"></div>
+        <span class="username" style="font-weight: 600; color: var(--header-primary);">user123</span>
       </div>
-      <div class="post-content">
+      <div class="post-content-box" style="width: 100%; max-width: 420px; height: 200px; border-radius: 8px; background: var(--background-tertiary); border: 1px solid var(--background-accent); display: flex; align-items: center; justify-content: center; text-align: center; margin-bottom: 12px;">
         this is a social media post
       </div>
-      <div class="like-section">
+      <div class="like-section" style="margin-bottom: 12px;">
         <span id="heartIcon" class="heart-icon" onclick="toggleHeart()">♡</span>
       </div>
       <div class="comment-input-section">

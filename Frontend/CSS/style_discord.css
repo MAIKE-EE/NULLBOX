@@ -1000,7 +1000,15 @@ textarea {
 }
 
 .heart-icon {
+ font-size: 30px;
+ cursor: pointer;
+ color: var(--interactive-normal);
+ transition: all 0.2s ease;
     display: inline-block;
+}
+
+.heart-icon:hover {
+ transform: scale(1.1);
 }
 
 /* Comment Input - Below like button */
