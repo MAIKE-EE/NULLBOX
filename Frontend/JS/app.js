@@ -885,6 +885,10 @@ function loadLoginLab() {
   `;
 
   // Set the initial login query template
+  const queryTitle = document.getElementById("queryTitle");
+  if (queryTitle) {
+    queryTitle.textContent = "Query Executed";
+  }
   const currentQuery = document.getElementById('currentQuery');
   if (currentQuery) {
     currentQuery.textContent = "SELECT * FROM users WHERE username = '' AND password = ''";
@@ -1489,6 +1493,12 @@ function loadPingLab() {
   `;
 
   explanation.innerHTML = "Welcome to NULLBOX! Here you can safely test payloads and learn about injection attacks. Select a lab and try out some inputs to see explanations here.";
+
+  // Set the box title for Ping Lab
+  const queryTitle = document.getElementById("queryTitle");
+  if (queryTitle) {
+    queryTitle.textContent = "Query Executed";
+  }
 
   document.getElementById("hostname").addEventListener("keydown", e => {
     if (e.key === "Enter") submitPing();
