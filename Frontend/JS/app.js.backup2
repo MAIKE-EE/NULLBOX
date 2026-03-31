@@ -1386,28 +1386,114 @@ async function loadAccount() {
 }
 
 /* ---------- COMMENT LAB ---------- */
+// Comment state - reset on each reload
+let commentLabState = {
+    comments: []
+};
+
+function renderComments() {
+    const commentsContainer = document.getElementById("commentsContainer");
+    if (!commentsContainer) return;
+
+    commentsContainer.innerHTML = '';
+
+    commentLabState.comments.forEach((comment, index) => {
+        // VULNERABLE: Using innerHTML to insert unsanitized user input
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment-item';
+        commentDiv.innerHTML = comment;
+
+        commentsContainer.appendChild(commentDiv);
+    });
+
+    // Update right panel with rendered output
+    updateRenderedOutput();
+}
+
+function updateRenderedOutput() {
+    const queryDisplay = document.getElementById('queryDisplay');
+    const currentQuery = document.getElementById('currentQuery');
+
+    if (!queryDisplay || !currentQuery) return;
+
+    // Change heading for comment lab
+    const heading = queryDisplay.querySelector('h3');
+    if (heading) {
+        heading.textContent = 'Rendered Output';
+    }
+
+    // Show HTML structure of rendered comments
+    let outputHtml = '<div class="post-container">\n';
+    outputHtml += '  <div class="post-content">This is a post</div>\n';
+
+    if (commentLabState.comments.length > 0) {
+        outputHtml += '  <div class="comments-section">\n';
+        commentLabState.comments.forEach((comment, index) => {
+            const escapedComment = comment.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            outputHtml += `    <div class="comment-item">${escapedComment}</div>\n`;
+        });
+        outputHtml += '  </div>\n';
+    }
+    outputHtml += '</div>';
+
+    currentQuery.innerHTML = outputHtml;
+}
+
 function loadCommentLab() {
- setActiveTab("comment-tab");
- leftPanel.className = "left-panel comment-theme";
+    setActiveTab("comment-tab");
+    leftPanel.className = "left-panel comment-theme";
 
- labArea.innerHTML = `
- <h2>Comment Lab</h2>
- <textarea
- id="comment"
- placeholder="Write a comment..."
- ></textarea>
- <button onclick="submitComment()">Post</button>
- `;
+    // Reset comments on load
+    commentLabState.comments = [];
 
- explanation.innerHTML = "Welcome to NULLBOX! Here you can safely test payloads and learn about injection attacks. Select a lab and try out some inputs to see explanations here.";
+    labArea.innerHTML = `
+        <h2>Comment Lab</h2>
+        <div class="post-container">
+            <div class="post-content">
+                <div class="post-header">
+                    <img class="post-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23967bb6'/%3E%3C/svg%3E" alt="Avatar">
+                    <div class="post-meta">
+                        <div class="post-author">User</div>
+                        <div class="post-timestamp">Just now</div>
+                    </div>
+                </div>
+                <div class="post-text">This is a post</div>
+            </div>
+            <div class="comments-section" id="commentsContainer">
+                <!-- Comments will be rendered here -->
+            </div>
+            <div class="comment-input-container">
+                <input type="text"
+                       id="commentInput"
+                       class="comment-input"
+                       placeholder="Write a comment...">
+                <button onclick="submitComment()" class="comment-submit">Post</button>
+            </div>
+        </div>
+    `;
 
- document
- .getElementById("comment")
- .addEventListener("keydown", e => {
- if (e.key === "Enter" && e.ctrlKey) {
- submitComment();
- }
- });
+    explanation.innerHTML = "Post and comment system with vulnerable rendering. Comments are stored in temporary memory and reset on page reload. Try injecting HTML/JavaScript code to see how unsanitized input affects the page.";
+
+    // Set up right panel for rendered output
+    const queryDisplay = document.getElementById('queryDisplay');
+    const currentQuery = document.getElementById('currentQuery');
+    if (queryDisplay && currentQuery) {
+        const heading = queryDisplay.querySelector('h3');
+        if (heading) {
+            heading.textContent = 'Rendered Output';
+        }
+        currentQuery.textContent = 'HTML structure will appear here when comments are added...';
+    }
+
+    // Add enter key listener
+    document
+        .getElementById("commentInput")
+        .addEventListener("keydown", e => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                submitComment();
+            }
+        });
 }
 
 /* ---------- PING LAB ---------- */

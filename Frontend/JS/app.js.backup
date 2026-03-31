@@ -1386,8 +1386,65 @@ async function loadAccount() {
 }
 
 /* ---------- COMMENT LAB ---------- */
+// Comment state - reset on each reload
+let commentLabState = {
+    comments: []
+};
+
+function renderComments() {
+    const commentsContainer = document.getElementById("commentsContainer");
+    if (!commentsContainer) return;
+
+    commentsContainer.innerHTML = '';
+
+    commentLabState.comments.forEach((comment, index) => {
+        // VULNERABLE: Using innerHTML to insert unsanitized user input
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment-item';
+        commentDiv.innerHTML = comment;
+
+        commentsContainer.appendChild(commentDiv);
+    });
+
+    // Update right panel with rendered output
+    updateRenderedOutput();
+}
+
+function updateRenderedOutput() {
+    const queryDisplay = document.getElementById('queryDisplay');
+    const currentQuery = document.getElementById('currentQuery');
+
+    if (!queryDisplay || !currentQuery) return;
+
+    // Change heading for comment lab
+    const heading = queryDisplay.querySelector('h3');
+    if (heading) {
+        heading.textContent = 'Rendered Output';
+    }
+
+    // Show HTML structure of rendered comments
+    let outputHtml = '<div class="post-container">\n';
+    outputHtml += '  <div class="post-content">This is a post</div>\n';
+
+    if (commentLabState.comments.length > 0) {
+        outputHtml += '  <div class="comments-section">\n';
+        commentLabState.comments.forEach((comment, index) => {
+            const escapedComment = comment.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            outputHtml += `    <div class="comment-item">${escapedComment}</div>\n`;
+        });
+        outputHtml += '  </div>\n';
+    }
+    outputHtml += '</div>';
+
+    currentQuery.innerHTML = outputHtml;
+}
+
 function loadCommentLab() {
  setActiveTab("comment-tab");
+    leftPanel.className = "left-panel comment-theme";
+
+    // Reset comments on load
+    commentLabState.comments = [];
  leftPanel.className = "left-panel comment-theme";
 
  labArea.innerHTML = `

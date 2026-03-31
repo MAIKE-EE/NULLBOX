@@ -91,14 +91,11 @@ def analyze():
             is_vulnerable = False
             vulnerability_type = 'Benign'
 
-    # Generate explanation - use LLM for malicious payloads, static for benign
+    # Generate explanation - static for both malicious and benign payloads
+    # LLM explanations are only used in chatbot, not in initial detection
     if is_vulnerable:
-        # Use LLM to generate dynamic explanation for detected attack
-        prompt = build_payload_explanation_prompt(code, vulnerability_type, lab_type)
-        explanation_msg = call_llm([
-            {"role": "system", "content": "You are NULLBOT, a cybersecurity assistant. Explain vulnerabilities clearly."},
-            {"role": "user", "content": prompt}
-        ])
+        # Use static explanation for detected attacks
+        explanation_msg = generate_explanation(vulnerability_type, lab_type, code)
     else:
         # Use static explanation for benign inputs
         explanation_msg = generate_explanation('Benign', lab_type, code)
@@ -137,14 +134,11 @@ def ping_analyze():
 
     result = detector.detect(hostname)
 
-    # Generate explanation - use LLM for malicious payloads
+    # Generate explanation - static for both malicious and benign payloads
+    # LLM explanations are only used in chatbot, not in initial detection
     if result['is_vulnerable']:
-        # Use LLM to generate dynamic explanation for detected attack
-        prompt = build_payload_explanation_prompt(hostname, result['vulnerability_type'], "ping")
-        explanation_msg = call_llm([
-            {"role": "system", "content": "You are NULLBOT, a cybersecurity assistant. Explain vulnerabilities clearly."},
-            {"role": "user", "content": prompt}
-        ])
+        # Use static explanation for detected attacks
+        explanation_msg = generate_explanation(result['vulnerability_type'], "ping", hostname)
     else:
         # Use static explanation for benign inputs
         explanation_msg = generate_explanation("Benign", "ping", hostname)

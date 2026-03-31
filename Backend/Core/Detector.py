@@ -32,9 +32,9 @@ class Detector:
         # In detector.py, inside detect() method, after ML prediction:
 
         if class_name == "Command Injection" and confidence < 0.6:
-         # Low confidence, treat as benign
-          class_name = "Benign"
-          is_vuln = False
+            # Low confidence, treat as benign
+            class_name = "Benign"
+            is_vuln = False
 
         # Fallback for command injection
         if self.cmd_re.search(code):
