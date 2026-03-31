@@ -1394,7 +1394,7 @@ function loadCommentLab() {
     </div>
   `;
 
-  explanation.innerHTML = "welcome to comment lab, write comments to analyze";
+  explanation.innerHTML = "Welcome to Comment Lab! Write comments to analyze.";
 
   // Update the box heading for Comment Lab
   const queryTitle = document.getElementById("queryTitle");
