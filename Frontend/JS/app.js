@@ -881,12 +881,7 @@ function loadLoginLab() {
  <ol>
  <li>Try logging in with different credentials</li>
  <li>Register new users</li>
- <li>Explore Products, Orders, and Account pages</li>
- <li>Test SQL injection payloads in any input field</li>
- <li>Observe how inputs are used in SQL queries</li>
  </ol>
- <h4>Right Panel:</h4>
- <p>The right panel shows the SQL query being executed and ML analysis results.</p>
  `;
 
  // Set the initial login query template
@@ -1080,8 +1075,6 @@ const dashboardHTML = `
  <li><strong>View Orders:</strong> See your order history</li>
  <li><strong>Account Details:</strong> View account info</li>
  </ul>
- <h4>Security Testing:</h4>
- <p>Each page contains input fields vulnerable to SQL injection. Test payloads in any search bar or filter field.</p>
  `;
 
  // Set the dashboard query display
@@ -1118,14 +1111,6 @@ async function loadProductsPage() {
  explanation.innerHTML = `
  <h3>Products Page</h3>
  <p>Browse and search for products.</p>
- <h4>Testing Tips:</h4>
- <ul>
- <li>Try SQL injection in the search field</li>
- <li>Use payloads like: <code>' OR '1'='1</code></li>
- <li>Observe the SQL query execution</li>
- </ul>
- <h4>Right Panel:</h4>
- <p>Displays the SQL query used to search for products.</p>
  `;
 
  // Set the initial products query template
@@ -1221,14 +1206,6 @@ async function loadOrdersPage() {
  explanation.innerHTML = `
  <h3>Orders Page</h3>
  <p>View your order history.</p>
- <h4>Testing Tips:</h4>
- <ul>
- <li>Try SQL injection in filter parameters</li>
- <li>Test with different username inputs</li>
- <li>Observe query changes in the right panel</li>
- </ul>
- <h4>Current Query:</h4>
- <p>The displayed query shows how user input modifies the SQL.</p>
  `;
 
  // Set the initial orders query template
@@ -1325,14 +1302,6 @@ async function loadAccountPage() {
  explanation.innerHTML = `
  <h3>Account Details Page</h3>
  <p>View your account information and balance.</p>
- <h4>Testing Tips:</h4>
- <ul>
- <li>Try SQL injection in username field</li>
- <li>Test with UNION-based payloads</li>
- <li>Extract data from other tables</li>
- </ul>
- <h4>Query Structure:</h4>
- <p>Observe how username parameter is directly inserted into SQL query.</p>
  `;
 
  // Set the initial account query template
