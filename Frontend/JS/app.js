@@ -1394,7 +1394,13 @@ function loadCommentLab() {
     </div>
   `;
 
-  explanation.innerHTML = "Welcome to NULLBOX! Here you can safely test payloads and learn about injection attacks. Select a lab and try out some inputs to see explanations here.";
+  explanation.innerHTML = "welcome to comment lab, write comments to analyze";
+
+  // Update the box heading for Comment Lab
+  const queryTitle = document.getElementById("queryTitle");
+  if (queryTitle) {
+    queryTitle.textContent = "HTML Rendered";
+  }
 
   document.getElementById("commentInput").addEventListener("keydown", e => {
     if (e.key === "Enter") {
@@ -1434,6 +1440,9 @@ function submitComment() {
   // Render all comments using innerHTML (intentionally vulnerable to XSS)
   renderComments();
 
+  // Update XSS preview in right panel
+  updateXSSPreview(payload);
+
   // Send to ML model for analysis
   analyzePayload(payload);
 }
@@ -1459,6 +1468,13 @@ function executeInjectedScripts(comment) {
     newScript.textContent = oldScript.textContent;
     document.body.appendChild(newScript);
   });
+}
+
+function updateXSSPreview(payload) {
+  const currentQuery = document.getElementById("currentQuery");
+  if (!currentQuery) return;
+  const vulnerableHTML = `<div class="comment">${payload}</div>`;
+  currentQuery.textContent = vulnerableHTML;
 }
 
 /* ---------- PING LAB ---------- */
