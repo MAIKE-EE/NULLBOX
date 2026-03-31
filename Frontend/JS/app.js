@@ -437,8 +437,6 @@ async function analyzePayload(payload) {
           <div>malicious: ${isMalicious}</div>
           <div>type: ${isMalicious === "yes" ? (data.vulnerability_type || "N/A") : "Benign"}</div>
           <div>confidence: ${data.confidence !== undefined ? data.confidence.toFixed(2) : "N/A"}</div>
-          <hr style="margin: 10px 0; border: none; border-top: 1px solid #ccc;">
-          <div>${data.explanation || "No explanation provided."}</div>
         </div>
       `;
       explanation.innerHTML = formattedOutput;
