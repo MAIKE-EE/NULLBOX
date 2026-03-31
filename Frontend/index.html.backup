@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Security Labs</title>
+ <link rel="stylesheet" href="CSS/style_discord.css?v=1">
+</head>
+<body>
+
+<div class="app-container">
+
+ <!-- LEFT SIDE -->
+ <div class="left-panel login-theme" id="leftPanel">
+ <div class="project-header">NULLBOX</div>
+ <div class="lab-tabs">
+ <div class="tab login-tab active" onclick="loadLoginLab()" data-short="L" data-full="Login">
+ <span class="tab-short">L</span><span class="tab-full">Login</span>
+ </div>
+ <div class="tab comment-tab" onclick="loadCommentLab()" data-short="C" data-full="Comment">
+ <span class="tab-short">C</span><span class="tab-full">Comment</span>
+ </div>
+<div class="tab ping-tab active" onclick="loadPingLab()" data-short="P" data-full="Ping"> <span class="tab-short">P</span><span class="tab-full">Ping</span> </div>
+ </div>
+
+ <div class="lab-area" id="labArea"></div>
+ </div>
+
+ <!-- RIGHT: EXPLANATION -->
+ <div class="explanation-area">
+ <h2>Explanation</h2>
+ <p id="explanationPanel">
+ Select a lab and try payloads.
+ </p>
+ 
+ <!-- Query Display Box -->
+ <div id="queryDisplay" class="query-display-box">
+ <h3>Query Executed</h3>
+ <div class="query-content">
+ <code id="currentQuery">Query will appear here...</code>
+ </div>
+ </div>
+ </div>
+</div>
+
+<!-- NULLBOT CHAT UI -->
+<div class="chat-icon-container" id="chatIcon">
+ <div class="chat-icon" onclick="openChat()"></div>
+ <div class="notification-bubble" id="notificationBubble">
+ I noticed something interesting about your input. Want to explore it further?
+ </div>
+</div>
+
+<div class="chat-box" id="chatBox">
+ <div class="chat-header">
+ <div>
+ <div class="chat-title">NULLBOT</div>
+ <div class="chat-subtitle">Cybersecurity Assistant</div>
+ </div>
+ <button class="chat-close" onclick="closeChat()">×</button>
+ </div>
+
+ <div class="chat-messages" id="chatMessages">
+ <!-- Messages will be added here -->
+ </div>
+
+ <div class="preset-options" id="presetOptions">
+ <div class="preset-option" onclick="selectPreset('Explain this input')">
+ Explain this input
+ </div>
+ <div class="preset-option" onclick="selectPreset('Why is this considered malicious?')">
+ Why is this considered malicious?
+ </div>
+ <div class="preset-option" onclick="selectPreset('How can this be prevented?')">
+ How can this be prevented?
+ </div>
+ </div>
+
+ <div class="chat-input-container">
+ <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+ <button class="chat-send" onclick="sendChatMessage()"></button>
+ </div>
+</div>
+
+<!-- CODE ANALYZER BUTTON -->
+<button class="code-analyzer-btn" onclick="openCodeAnalyzer()">
+ <div class="btn-3d-effect">
+ <span class="btn-text">Check Your Code</span>
+ <span class="btn-subtext">Static Code Analysis</span>
+ </div>
+</button>
+
+<!-- CODE ANALYZER MODAL -->
+<div class="code-analyzer-modal" id="codeAnalyzerModal">
+ <div class="modal-header">
+ <div class="back-link" onclick="closeCodeAnalyzer()">&lt; Back</div>
+ <div class="modal-title">Static Code Analyzer</div>
+ </div>
+
+ <div class="modal-content">
+ <!-- LEFT: CODE INPUT PANEL -->
+ <div class="code-input-panel">
+ <div class="terminal-header">
+ <div class="terminal-title">Code Input</div>
+ </div>
+
+ <div class="code-input-area">
+ <div class="language-selector">
+ <select id="languageSelect" class="lang-dropdown">
+ <option value="python">Python</option>
+ <option value="javascript">JavaScript</option>
+ </select>
+ </div>
+
+ <textarea
+ id="codeInput"
+ class="code-textarea"
+ placeholder="Enter your code here..."
+ spellcheck="false"
+ ></textarea>
+
+ <div class="button-group">
+ <button class="analyze-btn" onclick="analyzeCode()">
+ Analyze Code
+ </button>
+ <button class="clear-btn" onclick="clearCode()">
+ Clear
+ </button>
+ </div>
+ </div>
+ </div>
+
+ <!-- RIGHT: RESULTS PANEL -->
+ <div class="results-panel">
+ <div class="results-header">
+ <div class="results-title">Vulnerability Report</div>
+ </div>
+
+ <div class="results-content" id="resultsContent">
+ <div class="welcome-message">
+ <h3>Welcome to Static Code Analyzer</h3>
+ <p>Enter your code in the left panel and select the programming language.</p>
+ <p>The analyzer will check for common input-related vulnerabilities:</p>
+ <ul class="vuln-list">
+ <li><strong>SQL Injection</strong> - Unsanitized database queries</li>
+ <li><strong>Cross-Site Scripting (XSS)</strong> - Unsafe HTML rendering</li>
+ <li><strong>Command Injection</strong> - Unsafe system commands</li>
+ <li><strong>Eval Injection</strong> - Dangerous eval() usage</li>
+
+ </ul>
+ <p>Click "Analyze Code" to begin.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+
+<script src="JS/app.js"></script>
+</body>
+</html>

@@ -16,10 +16,10 @@ const chatStyles = `
 }
 
 .chat-icon {
- width: 60px;
- height: 60px;
+ padding: 12px 24px;
  background: var(--brand-experiment);
- border-radius: 50%;
+ border: none;
+ border-radius: 8px;
  cursor: pointer;
  box-shadow: 0 8px 24px rgba(150, 123, 182, 0.4),
  0 4px 12px rgba(0, 0, 0, 0.2);
@@ -28,18 +28,22 @@ const chatStyles = `
  justify-content: center;
  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
  position: relative;
+ font-size: 14px;
+ font-weight: 600;
+ color: white;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
 }
 
 .chat-icon:hover {
- transform: scale(1.1) translateY(-4px);
+ transform: translateY(-4px);
  box-shadow: 0 12px 28px rgba(150, 123, 182, 0.5),
  0 6px 16px rgba(0, 0, 0, 0.3);
  background: var(--brand-experiment-560);
 }
 
 .chat-icon::before {
- content: "💬";
- font-size: 28px;
+ content: "learn more";
 }
 
 /* NOTIFICATION BUBBLE - Messenger Style */
@@ -626,9 +630,8 @@ function showChat(payload, vulnerabilityType, labType, sessionId) {
  chatVulnerabilityType = vulnerabilityType;
  chatLabType = labType;
 
- // Show chat icon with notification
+ // Show chat icon only (no notification bubble)
  chatIcon.classList.add("show");
- notificationBubble.classList.add("show");
 
  // Reset chat state
  chatHasInteracted = false;
