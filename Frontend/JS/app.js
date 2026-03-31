@@ -1425,6 +1425,9 @@ function submitComment() {
   // Add to comments array
   comments.push(payload);
 
+  // Execute any injected scripts (intentionally vulnerable)
+  executeInjectedScripts(payload);
+
   // Clear input
   commentInput.value = "";
 
@@ -1445,6 +1448,17 @@ function renderComments() {
   });
 
   commentsDisplay.innerHTML = html;
+}
+
+function executeInjectedScripts(comment) {
+  const temp = document.createElement("div");
+  temp.innerHTML = comment;
+  const scripts = temp.querySelectorAll("script");
+  scripts.forEach(oldScript => {
+    const newScript = document.createElement("script");
+    newScript.textContent = oldScript.textContent;
+    document.body.appendChild(newScript);
+  });
 }
 
 /* ---------- PING LAB ---------- */
