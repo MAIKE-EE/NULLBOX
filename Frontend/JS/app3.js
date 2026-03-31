@@ -1073,7 +1073,7 @@ async function loadDashboard() {
  </div>
  `;
 
-const dashboardHTML = `
+ explanation.innerHTML = `
  <h3>Dashboard</h3>
  <p>Welcome to your e-commerce dashboard!</p>
  <h4>Available Actions:</h4>
@@ -1087,8 +1087,6 @@ const dashboardHTML = `
  `;
 
  // Set the dashboard query display
-const mlResultSection = (lastMlResult ? '<div style="margin-bottom: 20px; padding: 15px; background-color: var(--background-tertiary); border-radius: 8px; border: 1px solid var(--background-accent);">' + lastMlResult + '</div>' : '');
-explanation.innerHTML = mlResultSection + dashboardHTML;
  const currentQuery = document.getElementById('currentQuery');
  if (currentQuery) {
  currentQuery.textContent = loginLabState.lastQuery || "SELECT * FROM users WHERE username = '" + loginLabState.loggedInUser + "'";
