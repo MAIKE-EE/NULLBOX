@@ -525,7 +525,6 @@ async function analyzeCode() {
           <div style="width: 60%; height: 100%; background: #967bb6; animation: loading 2s infinite;"></div>
         </div>
       </div>
-    </div>
   `;
 
   // Add CSS for loading animation
@@ -860,6 +859,8 @@ function loadLoginLab() {
       <div class="form-group">
         <label for="loginPassword">Password:</label>
         <input type="password" id="loginPassword" placeholder="Enter password" autocomplete="off">
+            <span onclick="togglePasswordVisibility()" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" style="cursor: pointer; font-size: 0.875em; color: var(--text-muted);">View password</span>
+        </div>
       </div>
       <div class="button-group">
         <button onclick="submitLogin()" class="btn-primary">Login</button>
@@ -893,6 +894,18 @@ function loadLoginLab() {
   if (currentQuery) {
     currentQuery.textContent = "SELECT * FROM users WHERE username = '' AND password = ''";
   }
+}
+
+function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('loginPassword');
+    const button = document.querySelector('.password-toggle');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        button.textContent = '🙈';
+    } else {
+        passwordInput.type = 'password';
+        button.textContent = '👁️';
+    }
 }
 
 async function submitLogin() {
@@ -1404,6 +1417,10 @@ function loadCommentLab() {
   const queryTitle = document.getElementById("queryTitle");
   if (queryTitle) {
     queryTitle.textContent = "HTML Rendered";
+    const currentQuery = document.getElementById("currentQuery");
+    if (currentQuery) {
+        currentQuery.textContent = "<div class=\"comment\">user input</div>";
+    }
   }
 
   document.getElementById("commentInput").addEventListener("keydown", e => {
