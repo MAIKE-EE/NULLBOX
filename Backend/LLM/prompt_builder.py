@@ -24,9 +24,16 @@ Payload: {escaped_payload}
 Vulnerability type: {vuln_name}
 User question: {user_message}
 
-Respond clearly and simply. Keep explanations educational, safe, and relevant to the lab context.
-Focus on understanding the vulnerability and how to prevent it.
-Do not provide harmful or operational instructions.
+Your response must follow this exact format:
+user input:{escaped_payload} lab:{lab_type} <your precise answer to the user's question>
+
+Key requirements:
+- You have full context of this educational lab system
+- Answer ONLY what is specifically asked - no extra information
+- Be precise, concise, and direct
+- Do not provide harmful or operational instructions
+- Keep responses educational and safe
+- Maintain proper punctuation and formatting
 """
 
 
