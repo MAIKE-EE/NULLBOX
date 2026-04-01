@@ -434,6 +434,7 @@ async function analyzePayload(payload) {
     const isMalicious = data.is_vulnerable ? "yes" : "no";
     const formattedOutput = `
       <div style="font-family: monospace; line-height: 1.6;">
+            <div>input: ${payload}</div>
         <div>malicious: ${isMalicious}</div>
         <div>type: ${isMalicious === "yes" ? (data.vulnerability_type || "N/A") : "Benign"}</div>
         <div>confidence: ${data.confidence !== undefined ? data.confidence.toFixed(2) : "N/A"}</div>
@@ -1552,6 +1553,7 @@ async function analyzePingPayload(payload) {
     const isMalicious = data.is_vulnerable ? "yes" : "no";
     const formattedOutput = `
       <div style="font-family: monospace; line-height: 1.6;">
+            <div>input: ${payload}</div>
         <div>malicious: ${isMalicious}</div>
         <div>type: ${isMalicious === "yes" ? (data.vulnerability_type || "N/A") : "Benign"}</div>
         <div>confidence: ${data.confidence !== undefined ? data.confidence.toFixed(2) : "N/A"}</div>
