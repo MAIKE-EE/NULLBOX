@@ -1510,13 +1510,18 @@ function loadPingLab() {
     <button onclick="submitPing()">Ping</button>
   `;
 
-  explanation.innerHTML = "Welcome to NULLBOX! Here you can safely test payloads and learn about injection attacks. Select a lab and try out some inputs to see explanations here.";
+  explanation.innerHTML = "Welcome to Ping Lab. Enter something to analyze.";
 
   // Set the box title for Ping Lab
   const queryTitle = document.getElementById("queryTitle");
   if (queryTitle) {
-    queryTitle.textContent = "Query Executed";
+    queryTitle.textContent = "Python Code";
   }
+    // Set initial command display
+    const currentQuery = document.getElementById("currentQuery");
+    if (currentQuery) {
+        currentQuery.textContent = 'os.system("ping -c 4 " + user_input)';
+    }
 
   document.getElementById("hostname").addEventListener("keydown", e => {
     if (e.key === "Enter") submitPing();
@@ -1534,6 +1539,10 @@ function submitPing() {
 
 async function analyzePingPayload(payload) {
   try {
+        const currentQuery = document.getElementById("currentQuery");
+        if (currentQuery) {
+            currentQuery.textContent = 'os.system("ping -c 4 " + user_input)';
+        }
     const lab_type = document.querySelector(".tab.active").textContent.toLowerCase();
     const res = await fetch("http://127.0.0.1:5000/ping_analyze", {
       method: "POST",
